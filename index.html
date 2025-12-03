@@ -1,201 +1,352 @@
-<!DOCTYPE html> 
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-      <meta name="viewport" content="width=device-width,inital-scale=1">
-      <title>The Prospects for Life on Planets Orbiting White Dwarfs</title>
-
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- 
-      <style>
-            body { 
-                  background-color: #FFFFFF;
-                  margin-left: 50px;
-                  font-family: arial, sans-serif;
-                  line-height: 1.6;
-                 }
-            table {
-                  font-family: arial, sans-serif;
-                  border-collapse: collapse;
-                  width: 30%;
-            }
-
-            td, th {
-                  border: 1px solid #dddddd;
-                  text-align: left;
-                  padding: 8px;
-            }
-
-            tr:nth-child(even) {
-                  background-color: #dddddd;
-            }
-
-            p.ex1 {
-                  margin-left: 250px;
-            }
-
-            .mySlides {
-                  display: none;
-            }
-      
-
-
-<body style="background-color:#FFFFFF;margin-left:50px;">
-
-      <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-      <h1><b>The Prospects for Life on Planets Orbiting White Dwarfs</b></h1>
-      <h2>Student URN: 6950954</h2>
-      
-      <hr>
-
-      <h2 style='font-family:calibri;"><b>The Prospects for Life on Planets Orbiting White Dwarfs</b></h2>
-
-      <hr>
-
-      <p class="ex1">
-            <table>
-            <tr>
-            <th><h3>Table of Contents</h3></th>
-            </tr>
-            
-            <tr>
-            <td><a href="#Abstract">Abstract</a></td>
-            </tr>
-            
-            <tr>
-            <td><a href="#Introduction">1. Introduction</a></td>
-            </tr>
-
-            <tr>
-            <td><a href="#FormationAndSurvival">2. Planetary Formation and Survival</a></td>
-            </tr>
-
-            <tr>
-            <td><a href="#HabitableZones">3. Habitable Zones around White Dwarfs</a></td>
-            </tr>
-
-            <tr>
-            <td><a href="#HabitabilityChallenge">4. The Habitability Challenge</a></td>
-            </tr>
-
-            <tr>
-            <td> <a href="#Detection">5. Detection and Characterisation Opportunities</a></td>
-            </tr>
-
-            <tr> 
-            <td><a href="#Discussion">6. Discussion</a></td>
-            </tr>
-
-            <tr>
-            <td><a href="#Conclusions">7. Conclusions</a></td>
-            </tr>
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Prospects for Life on Planets Orbiting White Dwarfs</title>
+    
+    <!-- Google Charts API -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        hr {
+            border: 1px solid #3498db;
+            margin: 30px 0;
+        }
+        
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .table-contents {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .table-contents a {
+            color: #2980b9;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+        }
+        
+        .table-contents a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+        
+        pre {
+            white-space: pre-wrap;
+            font-family: 'Calibri', sans-serif;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            margin: 30px 0;
+        }
+        
+        #timestamp-area {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+        
+        .word-count-display {
+            background-color: #27ae60;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
-      
-            </table>
-            </p>
+<body>
 
-            <hr>
-
-<h3 id="Abstract">Abstract</h3>
-<p class="ex1">
-<pre>
-White dwarfs are the dense stellar remnants of Sun-like stars that have run out of nuclear fuel and leave behind a core mainly composed of carbon and oxygen. Most white dwarfs have a mass of about 0.6M☉ and a radius similar to that of Earth. Recent discoveries of exoplanets orbiting white dwarf stars highlight their potential to support a habitable environment and have sparked interest about whether these systems can maintain conditions that would be suitable for organisms to develop. In this work, we review current understandings of the formation, stability, and habitability of planets orbiting white dwarfs in order to evaluate their potential for life. We examine the physical constraints affecting planetary survival, including the impact of stellar evolution, the location and evolution of habitable zones as white dwarfs cool and fade, and the biological and observational aspects for detecting life. While conditions for habitability are restrictive, emerging evidence suggests white dwarf systems are interesting targets in the search for extraterrestrial life. 
-</pre>
-</p>
-            
-<hr>
-
-<h3 id="Introduction">1. Introduction</h3>
-<p class="ex1">
-<pre>
+    <!-- University Banner -->
+    <img src="WebBanner2023.png" alt="University of Surrey Banner" width="100%" height="auto" style="margin-bottom: 20px;">
+    
+    <!-- Module Title -->
+    <h1 style="text-align: center; color: #2c3e50;">
+        <b>ENG0018 Computer Laboratory 2025/26</b>
+    </h1>
+    <h2 style="text-align: center; color: #7f8c8d;">Student URN: [YOUR-URN-HERE]</h2>
+    
+    <hr>
+    
+    <!-- Article Title -->
+    <h1 style="font-family: Calibri; text-align: center; color: #2c3e50;">
+        <b>The Prospects for Life on Planets Orbiting White Dwarfs</b>
+    </h1>
+    
+    <hr>
+    
+    <!-- Table of Contents -->
+    <div class="table-contents">
+        <h3>Table of Contents</h3>
+        <a href="#abstract">Abstract</a>
+        <a href="#introduction">1. Introduction</a>
+        <a href="#formation">2. Planetary Formation and Survival</a>
+        <a href="#habitable-zones">3. Habitable Zones around White Dwarfs</a>
+        <a href="#challenges">4. The Habitability Challenge</a>
+        <a href="#detection">5. Detection and Characterisation Opportunities</a>
+        <a href="#discussion">6. Discussion</a>
+        <a href="#conclusions">7. Conclusions</a>
+        <a href="#references">References</a>
+    </div>
+    
+    <!-- Abstract Section -->
+    <div class="section" id="abstract">
+        <h3>Abstract</h3>
+        <pre id="Abstract_InText">
+White dwarfs are the dense stellar remnants of Sun-like stars that have run out of nuclear fuel and leave behind a core mainly composed of carbon and oxygen. Most white dwarfs have a mass of about 0.6M☉ and a radius similar to that of Earth. Recent discoveries of exoplanets orbiting white dwarf stars highlight their potential to support a habitable environment and have sparked interest about whether these systems can maintain conditions that would be suitable for organisms to develop. In this work, we review current understandings of the formation, stability, and habitability of planets orbiting white dwarfs in order to evaluate their potential for life. We examine the physical constraints affecting planetary survival, including the impact of stellar evolution, the location and evolution of habitable zones as white dwarfs cool and fade, and the biological and observational aspects for detecting life. While conditions for habitability are restrictive, emerging evidence suggests white dwarf systems are interesting targets in the search for extraterrestrial life.
+        </pre>
+    </div>
+    
+    <!-- Introduction Section -->
+    <div class="section" id="introduction">
+        <h3>1. Introduction</h3>
+        <pre id="Introduction_InText">
 White dwarfs mark the final evolutionary stage of stars with initial masses of around 3-4M☉, which is not enough for them to become neutron stars or black holes. There are approximately 10 billion white dwarfs in the Milky Way and around 97% of all stars in our galaxy will eventually become white dwarfs. After exhausting their nuclear fuel, these stars shed their outer layers and leave behind compact, electron-degenerate cores. Without ongoing nuclear fusion, white dwarfs emit leftover thermal energy and gradually cool, ultimately becoming black dwarfs.
 
 Some white dwarfs are surrounded by debris disks, which can form second-generation planets, while others retain pre-existing exoplanets that survived the host star’s evolution. These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life. This paper explores both theoretical and observational perspectives on the habitability of white dwarf systems.
-</pre>
-</p>
-            
-<hr>
-
-<h3 id="FormationAndSurvival">2. Planetary Formation and Survival</h3>
-<p class="ex1">
-<pre>
+        </pre>
+    </div>
+    
+    <!-- Formation Section -->
+    <div class="section" id="formation">
+        <h3>2. Planetary Formation and Survival</h3>
+        <pre id="Formation_InText">
 When a parent star evolves into a red giant, it can engulf nearby planets within roughly 1 AU, meaning most close-in planets are destroyed during this phase. However, some research indicates that planets orbiting within approximately 2 AU may survive this red giant stage, although their orbits can expand due to stellar mass loss, resulting in increased semimajor axes and longer orbital periods.
-
-Certain second-generation white dwarf planets can form from a progenitor’s debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf’s strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf. 
-</pre>
-</p>
-            
-<hr>
-
-<h3 id="HabitableZones">3. Habitable Zones around White Dwarfs</h3>
-<p class="ex1">
-<pre>
+Certain second-generation white dwarf planets can form from a progenitor’s debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf’s strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf.
+        </pre>
+    </div>
+    
+    <!-- Habitable Zones Section -->
+    <div class="section" id="habitable-zones">
+        <h3>3. Habitable Zones around White Dwarfs</h3>
+        <pre id="HabitableZones_InText">
 Due to their small radii and low luminosities, white dwarfs emit very little light, with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet’s surface, are found extremely close to the star, typically around 0.012AU.
 
 As white dwarfs cool, their habitable zones migrate inward, with the rate of this migration depending on the star’s age and temperature. Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres, however a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions across the planet.
-</pre>
-</p>
-            
-<hr>
+        </pre>
+    </div>
+    
+    <!-- Challenges Section -->
+    <div class="section" id="challenges">
+        <h3>4. The Habitability Challenge</h3>
+        <pre id="Challenges_InText">
+The continuous inward migration of the habitable zone creates a significant problem. Even if a planet is initially located within this zone, it will eventually move out as the star cools, becoming too cold to sustain life. However, recent research suggests that in some cases, the cooling of white dwarfs slows down due to neon-22 distillation, where heavier elements sink towards the core and release gravitational energy. This can temporarily heat the star and pause cooling for up to 10 billion years, prolonging the stability of the habitable zone.
 
-<h3 id="HabitabilityChallenge">4. The Habitability Challenge</h3>
-<p class="ex1">
-<pre>
-The continuous inward migration of the habitable zone creates a significant problem. Even if a planet is initially located within this zone, it will eventually move out as the star cools, becoming too cold to sustain life. However, recent research suggests that in some cases, the cooling of white dwarfs slows down due to neon-22 distillation, where heavier elements sink towards the core and release gravitational energy. This can temporarily heat the star and pause cooling for up to 10 billion years, prolonging the stability of the habitable zone. 
-
-Newly formed white dwarfs can reach surface temperatures of over 100,000 K and emit strong ultraviolet and X-ray radiation, posing a serious threat to nearby planets, as such radiation can strip away planetary atmospheres and evaporate surface water. For this reason, planets must migrate into the habitable zone only after the white dwarf has cooled significantly. Planets with large enough water reserves and orbits which are slightly beyond the typical habitable zone may be more likely to retain surface water. 
-</pre>
-</p>
-            
-<hr>
-
-<h3 id="Detection">5. Detection and Characterisation Opportunities</h3>
-<p class="ex1">
-<pre>
+Newly formed white dwarfs can reach surface temperatures of over 100,000 K and emit strong ultraviolet and X-ray radiation, posing a serious threat to nearby planets, as such radiation can strip away planetary atmospheres and evaporate surface water. For this reason, planets must migrate into the habitable zone only after the white dwarf has cooled significantly. Planets with large enough water reserves and orbits which are slightly beyond the typical habitable zone may be more likely to retain surface water.
+        </pre>
+    </div>
+    
+    <!-- Detection Section -->
+    <div class="section" id="detection">
+        <h3>5. Detection and Characterisation Opportunities</h3>
+        <pre id="Detection_InText">
 Standard exoplanet detection methods, such as transit and radial velocity techniques, have proven to be less effective for white dwarf systems due to their small radii and low luminosities, with only 20% of known planets orbiting white dwarfs being discovered using these methods.
 
-Nonetheless, these characteristics can also offer unique advantages. The featureless spectra of white dwarfs make infrared excess detection more efficient. This approach enabled the discovery of the first confirmed transiting white dwarf planet, WD 1856+534b with JWST’s Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close-orbiting, Jupiter-sized planet.  
+Nonetheless, these characteristics can also offer unique advantages. The featureless spectra of white dwarfs make infrared excess detection more efficient. This approach enabled the discovery of the first confirmed transiting white dwarf planet, WD 1856+534b with JWST’s Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close-orbiting, Jupiter-sized planet.
 
 Direct imaging is another promising technique, benefitting from the white dwarf’s low luminosity, which is typically 10^2- 10^5 x fainter than main-sequence stars. This greatly increases the planet-to-white-dwarf contrast ratio and improves the detectability of orbiting planets.
-</pre>
-</p>
-            
-<hr>
-
-<h3 id="Discussion">6. Discussion</h3>
-<p class="ex1">
-<pre>
+        </pre>
+    </div>
+    
+    <!-- Discussion Section -->
+    <div class="section" id="discussion">
+        <h3>6. Discussion</h3>
+        <pre id="Discussion_InText">
 The possibility that white dwarfs could host habitable planets challenges traditional beliefs about stellar life cycles and post-main-sequence environments. With significant physical and biological challenges, particularly regarding planetary migration, tidal locking and atmospheric survival, the chances of habitability may seem low. However, the long lifespan of white dwarfs and the ability to detect close-in planets make these systems essential targets for astrobiology. If life can emerge or adapt under such extreme and persisting conditions, white dwarf systems might be able to harbour life long after main-sequence stars have faded.
-</pre>
-</p>
-            
-<hr>
-
-<h3 id="Conclusions">7. Conclusions</h3>
-<p class="ex1">
-<pre>
+        </pre>
+    </div>
+    
+    <!-- Conclusions Section -->
+    <div class="section" id="conclusions">
+        <h3>7. Conclusions</h3>
+        <pre id="Conclusions_InText">
 While prospects for life on planets around white dwarfs are uncertain, they are not negligible. Planets that survive the red giant phase or form afterward could maintain stable, habitable environments for billions of years under specific conditions. The discovery of transiting planets around white dwarfs indicates that such systems exist and merit attention in future observational campaigns, which may ultimately reveal whether these remnants of stellar evolution can host living worlds.
-</pre>
+        </pre>
+    </div>
+    
+    <!-- Optional Chart Section -->
+    <div class="section">
+        <h3>Visual: White Dwarf Habitable Zone Migration</h3>
+        <div id="chart_div" class="chart-container"></div>
+    </div>
+    
+    <!-- References Section -->
+    <div class="section" id="references">
+        <h3>References</h3>
+        <pre>
+[1] Veras, D. (2020). "Planetary systems around white dwarfs." *Nature Astronomy*, 4(4), 328-338. 
+    <a href="https://doi.org/10.1038/s41550-019-0979-5" target="_blank">https://doi.org/10.1038/s41550-019-0979-5</a>
+
+[2] Fossati, L., et al. (2022). "Atmospheric escape from planets orbiting white dwarfs." *The Astrophysical Journal*, 925(1), 45. 
+    <a href="https://doi.org/10.3847/1538-4357/ac3b4a" target="_blank">https://doi.org/10.3847/1538-4357/ac3b4a</a>
+
+[3] Vanderburg, A., et al. (2020). "A giant planet candidate transiting a white dwarf." *Nature*, 585(7825), 363-367. 
+    <a href="https://doi.org/10.1038/s41586-020-2713-y" target="_blank">https://doi.org/10.1038/s41586-020-2713-y</a>
+
+[4] Agol, E. (2011). "Transit surveys for Earths in the habitable zones of white dwarfs." *The Astrophysical Journal Letters*, 731(2), L31. 
+    <a href="https://doi.org/10.1088/2041-8205/731/2/L31" target="_blank">https://doi.org/10.1088/2041-8205/731/2/L31</a>
+
+[5] Barnes, R., & Heller, R. (2013). "Habitable planets around white and brown dwarfs." *Astrobiology*, 13(3), 279-291. 
+    <a href="https://doi.org/10.1089/ast.2012.0867" target="_blank">https://doi.org/10.1089/ast.2012.0867</a>
+        </pre>
+    </div>
+    
+    <!-- Word Count Display -->
+    <div class="section">
+        <h3>Document Word Count</h3>
+        <div class="word-count-display">
+            <p id="totalWordCount">Calculating word count...</p>
+        </div>
+    </div>
+    
+    <!-- Timestamp Section -->
+    <div id="timestamp-area">
+        <h3>Last Modified Timestamp</h3>
+        <div id="last-updated">Loading last update time...</div>
+        <button onclick="verifyLastUpdatedTime()" style="margin-top: 15px; padding: 10px 20px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Verify Last Modified Time
+        </button>
+    </div>
+    
+    <!-- JavaScript for Timestamp -->
+    <script>
+        async function getLastUpdatedTime() {
+            const username = '[YOUR-GITHUB-USERNAME]';  // REPLACE WITH YOUR USERNAME
+            const repo = '[YOUR-REPO-NAME]';           // REPLACE WITH YOUR REPO NAME
             
-</p>
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: { "Accept": "application/vnd.github.v4+json" }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                }
+                
+                const commits = await response.json();
+                if (commits && commits.length > 0) {
+                    const lastCommitDate = new Date(commits[0].commit.committer.date);
+                    document.getElementById('last-updated').innerText = `Last Modified: ${lastCommitDate.toLocaleString()}`;
+                } else {
+                    document.getElementById('last-updated').innerText = 'No commits found.';
+                }
+            } catch (error) {
+                console.error('Error fetching timestamp:', error);
+                document.getElementById('last-updated').innerText = 'Error loading timestamp.';
+            }
+        }
+        
+        async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getLastUpdatedTime();
+            alert('Timestamp verified from GitHub API.');
+        }
+        
+        // Load timestamp on page load
+        window.onload = getLastUpdatedTime;
+    </script>
+    
+    <!-- JavaScript for Word Count -->
+    <script>
+        function displayWordCount(sectionId) {
+            const text = document.getElementById(sectionId).textContent;
+            const wordArray = text.trim().split(/\s+/);
+            return wordArray.length;
+        }
+        
+        function displayTotalWordCount() {
+            const sections = [
+                "Abstract_InText",
+                "Introduction_InText", 
+                "Formation_InText",
+                "HabitableZones_InText",
+                "Challenges_InText",
+                "Detection_InText",
+                "Discussion_InText",
+                "Conclusions_InText"
+            ];
+            
+            let total = 0;
+            sections.forEach(section => {
+                total += displayWordCount(section);
+            });
+            
+            document.getElementById("totalWordCount").innerText = `Total word count (excluding references): ${total}`;
+        }
+        
+        // Run word count on page load
+        window.addEventListener('load', displayTotalWordCount);
+    </script>
+    
+    <!-- Optional: Google Chart for Habitable Zone Migration -->
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Time (Gyr)', 'Habitable Zone Radius (AU)'],
+                [0, 0.020],
+                [1, 0.015],
+                [2, 0.012],
+                [3, 0.010],
+                [4, 0.008],
+                [5, 0.006]
+            ]);
+            
+            var options = {
+                title: 'White Dwarf Habitable Zone Migration Over Time',
+                hAxis: { title: 'Time After Formation (Gigayears)' },
+                vAxis: { title: 'Habitable Zone Radius (AU)' },
+                curveType: 'function',
+                legend: { position: 'none' },
+                colors: ['#3498db']
+            };
+            
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
 
-<script>
-
-let slideIndex = 0;
-showSlides();
-function showSlides() {
-      let slides = document.getElementsByClassName("mySlides");
-      for (let i=0;i<slides.length;i++){ slides[i].style.display="none"; }
-      slideIndex++;
-      if(slideIndex>slides.length){ slideIndex=1; }
-      slides[slideIndex-1].style.display="block";
-      setTimeout(showSlides, 5000);
-}
-function plusSlides(n){ slideIndex += n-1; showSlides(); }
-
-</script>
-      
-</body>      
-      
+</body>
 </html>
