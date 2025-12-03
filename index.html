@@ -182,9 +182,63 @@
             font-style: italic;
             font-size: 0.9em;
         }
+
+        /* table */
+        .data-table {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .table-container {
+            display: inline-block;
+            background-color; rgba(0, 30, 60, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border: 3px solid #00ffff;
+            max-width: 600px;
+        }
+
+        .table-title {
+            color: #ffff66;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #e0e0ff;
+        }
+
+        .comparison-table th {
+            padding: 12px;
+            border: 1px solid #ff00ff;
+            text-align: left;
+            background-color: rgba(102, 0, 102, 0.5);
+        }
+
+        .comparison-table td {
+            padding: 10px;
+            border: 1px solid #00ffff;
+            background-color: rgba(0, 0, 50, 0.3);
+        }
+
+        .table-caption {
+            color: #ff66cc;
+            font-size: 0.9em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .table-note {
+            color: #00ffff;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
+    
     <!-- Animated stars in background -->
     <div id="stars-container"></div>
     
@@ -249,6 +303,46 @@
             <p>Due to their small radii and low luminosities, white dwarfs emit very little light (Embry-Riddle, 2024), with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet's surface (Oxford Academic, 2024), are found extremely close to the star, typically around 0.012AU (IOP Science, 2024b).</p>
             
             <p>As white dwarfs cool, their habitable zones migrate inward, with the rate of this migration depending on the star's age and temperature (IOP Science, 2024b). Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres, however a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions across the planet.</p>
+
+            <div class="data-table">
+                <div class="table-container">
+                    <h4 class="table-title">Habitable Zone Comparison of Stellar Types</h4>
+                    <table class="comparison-table">
+                        <tr>
+                            <th>Star Type</th>
+                            <th>Habitable Zone Distance</th>
+                            <th>Typical Temperature Range</th>
+                            <th>Planetary Period</th>
+                        </tr>
+                        <tr>
+                            <td><strong>White Dwarf</strong></td>
+                            <td>~0.012 AU</td>
+                            <td>200-300 K</td>
+                            <td>1-10 days</td>
+                        </tr>
+                        <tr>
+                            <td>Sun-like (G-type)</td>
+                            <td>0.95-1.37 AU</td>
+                            <td>250-350 K</td>
+                            <td>~365 days</td>
+                        </tr>
+                        <tr>
+                            <td>Red Dwarf (M-type)</td>
+                            <td>0.03-0.1 AU</td>
+                            <td>200-280 K</td>
+                            <td>10-40 days</td>
+                        </tr>
+                    </table>
+                    <p class="table-caption">
+                        <em>Comparison of habitable zones around different stellar types (Kasting et al., 1993; IOP Science, 2024b). White dwarfs require planets to orbit extremely close, resulting in very short orbital periods and potential tidal locking.</em>
+                    </p>
+                    <p class="table-note">
+                        <strong>Note:</strong>1 AU = Earth-Sun distance (~150 million km). Data compiled from multiple exoplanet studies.
+                    </p>
+                </div>
+            </div>
+
+            <p>As shown in Table 1, white dwarf habitable zones are orders of magnitude closer than those of main-sequence stars like our Sun (Kasting et al., 1993). This proximity results in orbital periods measured in days rather than years, significantly altering planetary climate dynamics and increasing the likelihood of tidal locking effects.</p>
         </div>
         
         <!-- Habitability Challenge -->
@@ -429,22 +523,6 @@
             setInterval(updateTime, 60000);
         };
         
-        /* Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        }); */
     </script>
 </body>
 </html>
