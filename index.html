@@ -73,8 +73,22 @@
             margin: 30px 0;
         }
         
-        #timestamp-area {
+        .presentation-container {
             background-color: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+        
+        .presentation-container video {
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .timestamp-area {
+            background-color: #34495e;
             color: white;
             padding: 20px;
             text-align: center;
@@ -89,6 +103,15 @@
             border-radius: 5px;
             margin-top: 20px;
             display: inline-block;
+        }
+        
+        .warning-box {
+            background-color: #f39c12;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 5px solid #e67e22;
         }
     </style>
 </head>
@@ -123,6 +146,7 @@
         <a href="#detection">5. Detection and Characterisation Opportunities</a>
         <a href="#discussion">6. Discussion</a>
         <a href="#conclusions">7. Conclusions</a>
+        <a href="#presentation">Conference Presentation</a>
         <a href="#references">References</a>
     </div>
     
@@ -140,7 +164,7 @@ White dwarfs are the dense stellar remnants of Sun-like stars that have run out 
         <pre id="Introduction_InText">
 White dwarfs mark the final evolutionary stage of stars with initial masses of around 3-4M☉, which is not enough for them to become neutron stars or black holes. There are approximately 10 billion white dwarfs in the Milky Way and around 97% of all stars in our galaxy will eventually become white dwarfs. After exhausting their nuclear fuel, these stars shed their outer layers and leave behind compact, electron-degenerate cores. Without ongoing nuclear fusion, white dwarfs emit leftover thermal energy and gradually cool, ultimately becoming black dwarfs.
 
-Some white dwarfs are surrounded by debris disks, which can form second-generation planets, while others retain pre-existing exoplanets that survived the host star’s evolution. These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life. This paper explores both theoretical and observational perspectives on the habitability of white dwarf systems.
+Some white dwarfs are surrounded by debris disks, which can form second-generation planets, while others retain pre-existing exoplanets that survived the host star's evolution. These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life. This paper explores both theoretical and observational perspectives on the habitability of white dwarf systems.
         </pre>
     </div>
     
@@ -149,7 +173,7 @@ Some white dwarfs are surrounded by debris disks, which can form second-generati
         <h3>2. Planetary Formation and Survival</h3>
         <pre id="Formation_InText">
 When a parent star evolves into a red giant, it can engulf nearby planets within roughly 1 AU, meaning most close-in planets are destroyed during this phase. However, some research indicates that planets orbiting within approximately 2 AU may survive this red giant stage, although their orbits can expand due to stellar mass loss, resulting in increased semimajor axes and longer orbital periods.
-Certain second-generation white dwarf planets can form from a progenitor’s debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf’s strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf.
+Certain second-generation white dwarf planets can form from a progenitor's debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf's strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf.
         </pre>
     </div>
     
@@ -157,9 +181,9 @@ Certain second-generation white dwarf planets can form from a progenitor’s deb
     <div class="section" id="habitable-zones">
         <h3>3. Habitable Zones around White Dwarfs</h3>
         <pre id="HabitableZones_InText">
-Due to their small radii and low luminosities, white dwarfs emit very little light, with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet’s surface, are found extremely close to the star, typically around 0.012AU.
+Due to their small radii and low luminosities, white dwarfs emit very little light, with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet's surface, are found extremely close to the star, typically around 0.012AU.
 
-As white dwarfs cool, their habitable zones migrate inward, with the rate of this migration depending on the star’s age and temperature. Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres, however a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions across the planet.
+As white dwarfs cool, their habitable zones migrate inward, with the rate of this migration depending on the star's age and temperature. Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres, however a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions across the planet.
         </pre>
     </div>
     
@@ -179,9 +203,9 @@ Newly formed white dwarfs can reach surface temperatures of over 100,000 K and e
         <pre id="Detection_InText">
 Standard exoplanet detection methods, such as transit and radial velocity techniques, have proven to be less effective for white dwarf systems due to their small radii and low luminosities, with only 20% of known planets orbiting white dwarfs being discovered using these methods.
 
-Nonetheless, these characteristics can also offer unique advantages. The featureless spectra of white dwarfs make infrared excess detection more efficient. This approach enabled the discovery of the first confirmed transiting white dwarf planet, WD 1856+534b with JWST’s Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close-orbiting, Jupiter-sized planet.
+Nonetheless, these characteristics can also offer unique advantages. The featureless spectra of white dwarfs make infrared excess detection more efficient. This approach enabled the discovery of the first confirmed transiting white dwarf planet, WD 1856+534b with JWST's Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close-orbiting, Jupiter-sized planet.
 
-Direct imaging is another promising technique, benefitting from the white dwarf’s low luminosity, which is typically 10^2- 10^5 x fainter than main-sequence stars. This greatly increases the planet-to-white-dwarf contrast ratio and improves the detectability of orbiting planets.
+Direct imaging is another promising technique, benefitting from the white dwarf's low luminosity, which is typically 10^2- 10^5 x fainter than main-sequence stars. This greatly increases the planet-to-white-dwarf contrast ratio and improves the detectability of orbiting planets.
         </pre>
     </div>
     
@@ -207,6 +231,34 @@ While prospects for life on planets around white dwarfs are uncertain, they are 
         <div id="chart_div" class="chart-container"></div>
     </div>
     
+    <!-- ==================== PRESENTATION SECTION ==================== -->
+    <div class="section presentation-container" id="presentation">
+        <h2>🎤 Conference Presentation</h2>
+        <p style="margin-bottom: 20px;">Watch my 5-minute presentation summarizing the key findings of this research.</p>
+        
+        <!-- Video Presentation -->
+        <video src="ENG0018_Presentation.mp4" width="800" height="450" controls style="max-width: 100%;">
+            Your browser does not support the video tag. Please download the presentation 
+            <a href="ENG0018_Presentation.mp4" style="color: #3498db;">here</a>.
+        </video>
+        
+        <!-- Presentation Notes -->
+        <div style="margin-top: 20px; text-align: left; background-color: rgba(255,255,255,0.1); padding: 15px; border-radius: 5px;">
+            <h4>📝 Presentation Details:</h4>
+            <ul>
+                <li><strong>Format:</strong> PowerPoint with audio narration</li>
+                <li><strong>Duration:</strong> 5 minutes maximum</li>
+                <li><strong>Slides:</strong> 5 slides maximum</li>
+                <li><strong>Topics covered:</strong> Introduction, Habitable Zones, Challenges, Detection Methods, Conclusions</li>
+            </ul>
+            <div class="warning-box">
+                <strong>⚠️ Important:</strong> If your video file is too large for GitHub, compress it using 
+                <a href="https://www.compressmp4.io/" target="_blank" style="color: white; text-decoration: underline;">Compress MP4</a> 
+                before uploading.
+            </div>
+        </div>
+    </div>
+    
     <!-- References Section -->
     <div class="section" id="references">
         <h3>References</h3>
@@ -230,75 +282,82 @@ While prospects for life on planets around white dwarfs are uncertain, they are 
     
     <!-- Word Count Display -->
     <div class="section">
-        <h3>Document Word Count</h3>
+        <h3>📊 Document Word Count</h3>
         <div class="word-count-display">
             <p id="totalWordCount">Calculating word count...</p>
         </div>
     </div>
     
-    <!-- Timestamp Section -->
-    <div id="timestamp-area">
-        <h3>Last Modified Timestamp</h3>
+    <!-- ==================== TIMESTAMP & VERIFICATION ==================== -->
+    <div class="timestamp-area">
+        <h3>🕒 Last Modified Timestamp</h3>
+        <!-- Last commit time display -->
         <div id="last-updated">Loading last update time...</div>
+        
+        <!-- Verify Button -->
         <button onclick="verifyLastUpdatedTime()" style="margin-top: 15px; padding: 10px 20px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;">
             Verify Last Modified Time
         </button>
     </div>
     
-    <!-- JavaScript for Timestamp -->
+    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
+        // ==================== TIMESTAMP FUNCTION ====================
         async function getLastUpdatedTime() {
-            const username = '[YOUR-GITHUB-USERNAME]';  // REPLACE WITH YOUR USERNAME
-            const repo = '[YOUR-REPO-NAME]';           // REPLACE WITH YOUR REPO NAME
-            
+            const username = 'nr0025';
+            const repo = 'FY0025';
+           
             const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-            
             try {
                 const response = await fetch(url, {
                     method: 'GET',
-                    headers: { "Accept": "application/vnd.github.v4+json" }
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                    }
                 });
-                
                 if (!response.ok) {
-                    throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                    throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
                 }
-                
                 const commits = await response.json();
                 if (commits && commits.length > 0) {
                     const lastCommitDate = new Date(commits[0].commit.committer.date);
-                    document.getElementById('last-updated').innerText = `Last Modified: ${lastCommitDate.toLocaleString()}`;
+                   
+                    // Displaying the time on load
+                    document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
                 } else {
-                    document.getElementById('last-updated').innerText = 'No commits found.';
+                    document.getElementById('last-updated').innerText = 'No commits found in the repository.';
                 }
             } catch (error) {
-                console.error('Error fetching timestamp:', error);
-                document.getElementById('last-updated').innerText = 'Error loading timestamp.';
+                console.error('Error fetching the last updated time:', error);
+                document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
             }
         }
         
+        // Function to verify the last update time by re-fetching it from the API
         async function verifyLastUpdatedTime() {
             document.getElementById('last-updated').innerText = 'Verifying...';
             await getLastUpdatedTime();
-            alert('Timestamp verified from GitHub API.');
+            alert("Last modified time has been successfully verified from GitHub API.");
         }
         
-        // Load timestamp on page load
-        window.onload = getLastUpdatedTime;
-    </script>
-    
-    <!-- JavaScript for Word Count -->
-    <script>
-        function displayWordCount(sectionId) {
+        // ==================== WORD COUNT FUNCTION ====================
+        // Function to calculate and display word count for a specified section
+        function calculateWordCount(sectionId) {
+            // Get the text content from the specified section
             const text = document.getElementById(sectionId).textContent;
+            // Split text into words based on spaces and filter out any empty strings
             const wordArray = text.trim().split(/\s+/);
+            // Count the words
             return wordArray.length;
         }
         
+        // Function to calculate and display total word count from ALL sections
         function displayTotalWordCount() {
+            // Define ALL your article sections (IDs must match your HTML)
             const sections = [
                 "Abstract_InText",
-                "Introduction_InText", 
-                "Formation_InText",
+                "Introduction_InText",
+                "Formation_InText", 
                 "HabitableZones_InText",
                 "Challenges_InText",
                 "Detection_InText",
@@ -306,20 +365,31 @@ While prospects for life on planets around white dwarfs are uncertain, they are 
                 "Conclusions_InText"
             ];
             
-            let total = 0;
-            sections.forEach(section => {
-                total += displayWordCount(section);
+            let totalWordCount = 0;
+            let sectionCounts = {};
+            
+            // Calculate count for each section
+            sections.forEach(sectionId => {
+                if (document.getElementById(sectionId)) {
+                    const count = calculateWordCount(sectionId);
+                    sectionCounts[sectionId] = count;
+                    totalWordCount += count;
+                }
             });
             
-            document.getElementById("totalWordCount").innerText = `Total word count (excluding references): ${total}`;
+            // Display the total word count
+            document.getElementById("totalWordCount").innerHTML = 
+                `<strong>Total Word Count (excluding references): ${totalWordCount}</strong><br>
+                 <small>Abstract: ${sectionCounts["Abstract_InText"] || 0} | 
+                 Introduction: ${sectionCounts["Introduction_InText"] || 0} | 
+                 Formation: ${sectionCounts["Formation_InText"] || 0} | 
+                 Habitable Zones: ${sectionCounts["HabitableZones_InText"] || 0} | 
+                 Challenges: ${sectionCounts["Challenges_InText"] || 0}</small>`;
+            
+            return totalWordCount;
         }
         
-        // Run word count on page load
-        window.addEventListener('load', displayTotalWordCount);
-    </script>
-    
-    <!-- Optional: Google Chart for Habitable Zone Migration -->
-    <script>
+        // ==================== GOOGLE CHART ====================
         google.charts.load('current', { 'packages': ['corechart'] });
         google.charts.setOnLoadCallback(drawChart);
         
@@ -346,6 +416,18 @@ While prospects for life on planets around white dwarfs are uncertain, they are 
             var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
             chart.draw(data, options);
         }
+        
+        // ==================== INITIALIZE EVERYTHING ON PAGE LOAD ====================
+        function initializePage() {
+            // Run timestamp function
+            getLastUpdatedTime();
+            
+            // Run word count function
+            displayTotalWordCount();
+        }
+        
+        // Use DOMContentLoaded for better performance
+        document.addEventListener('DOMContentLoaded', initializePage);
     </script>
 
 </body>
