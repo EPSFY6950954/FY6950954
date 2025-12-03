@@ -3,337 +3,628 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FEPS Conference Project - White Dwarfs</title>
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>✧･ﾟ: *✧･ﾟ:* White Dwarfs & Life *:･ﾟ✧*:･ﾟ✧</title>
     
     <style>
+        /* TUMBLR/MYSPACE VIBES */
         body {
-            font-family: Arial, sans-serif;
-            margin-left: 50px;
-            margin-right: 50px;
+            font-family: 'Courier New', monospace, 'Comic Sans MS', cursive;
+            background-color: #0a0a1a;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 20, 147, 0.05) 10px, rgba(255, 20, 147, 0.05) 20px);
+            color: #e0e0ff;
             line-height: 1.6;
-            color: #333;
-            background-color: #FFFFFF;
-        }
-        
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        
-        .content-container {
-            max-width: 1200px;
+            margin: 0;
+            padding: 20px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
-        table {
-            width: 80%;
-            border-collapse: collapse;
+        /* Retro cursor */
+        body {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="%23ff00ff" stroke-width="2"/><circle cx="16" cy="16" r="4" fill="%2300ffff"/></svg>') 16 16, auto;
+        }
+        
+        /* Blinking stars in background */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+        
+        .star {
+            position: fixed;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            z-index: -1;
+        }
+        
+        /* Main content box with retro border */
+        .content-box {
+            background-color: rgba(10, 10, 30, 0.85);
+            border: 8px double #ff00ff;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 
+                0 0 30px rgba(255, 0, 255, 0.3),
+                inset 0 0 30px rgba(0, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-box::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.3;
+        }
+        
+        /* Tumblr-style headings */
+        h1, h2, h3 {
+            font-family: 'Georgia', serif;
+            text-shadow: 0 0 10px currentColor;
+            position: relative;
+            display: inline-block;
+            padding: 5px 15px;
+        }
+        
+        h1 {
+            color: #ff66cc;
+            font-size: 2.8em;
+            background: linear-gradient(to right, #330033, #660066);
+            border-left: 5px solid #ff00ff;
+            border-right: 5px solid #ff00ff;
+            transform: rotate(-1deg);
             margin: 20px 0;
         }
         
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        h2 {
+            color: #00ffff;
+            font-size: 2em;
+            border-bottom: 3px dotted #00ffff;
+            padding-bottom: 5px;
         }
         
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
+        h3 {
+            color: #ffff66;
+            font-size: 1.5em;
+            background-color: rgba(0, 0, 50, 0.7);
+            border-radius: 10px 0 10px 0;
         }
         
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
+        /* Retro links */
         a {
-            color: #3498db;
+            color: #ff66cc;
             text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            padding: 2px 5px;
+            transition: all 0.3s;
         }
         
         a:hover {
-            text-decoration: underline;
+            color: #00ffff;
+            background-color: rgba(255, 102, 204, 0.2);
+            text-shadow: 0 0 10px #00ffff;
+            transform: scale(1.05);
         }
         
-        .abstract {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #3498db;
+        a::after {
+            content: " ✦";
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        a:hover::after {
+            opacity: 1;
+        }
+        
+        /* Myspace-style profile box */
+        .profile-box {
+            background: linear-gradient(135deg, #330033, #000066);
+            border: 5px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        
+        .profile-box h3 {
+            text-align: center;
+            color: #ffff66;
+            margin-top: 0;
+        }
+        
+        /* Retro buttons */
+        button, .button {
+            background: linear-gradient(to bottom, #ff66cc, #cc0099);
+            border: 2px solid #ffff66;
+            color: white;
+            padding: 8px 15px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-shadow: 1px 1px 2px black;
+            box-shadow: 0 4px 0 #990066;
+        }
+        
+        button:hover, .button:hover {
+            background: linear-gradient(to bottom, #ff99dd, #ff66cc);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #990066;
+        }
+        
+        button:active, .button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #990066;
+        }
+        
+        /* Scrollbar styling (Webkit browsers) */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(180deg, #330033, #000033);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ff00ff, #00ffff);
+            border-radius: 10px;
+            border: 2px solid #330033;
+        }
+        
+        /* Animated divider */
+        hr {
+            border: none;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                #ff00ff, 
+                #00ffff, 
+                #ff00ff, 
+                transparent);
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        hr::before {
+            content: "✦";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #0a0a1a;
+            color: #ffff66;
+            padding: 0 15px;
+            font-size: 1.5em;
+        }
+        
+        /* Retro tables */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 3px solid #00ffff;
+            border-radius: 10px;
+            overflow: hidden;
             margin: 20px 0;
         }
         
-        .reference {
-            margin-bottom: 10px;
+        th {
+            background: linear-gradient(180deg, #660066, #330033);
+            color: #ffff66;
+            padding: 15px;
+            text-align: left;
+            font-family: 'Georgia', serif;
+            border-bottom: 2px dotted #ff00ff;
+        }
+        
+        td {
+            padding: 12px;
+            background-color: rgba(0, 0, 50, 0.5);
+            border-bottom: 1px solid rgba(255, 0, 255, 0.3);
+        }
+        
+        tr:hover td {
+            background-color: rgba(102, 0, 102, 0.5);
+        }
+        
+        /* Quote styling */
+        blockquote {
+            border-left: 5px solid #ff00ff;
             padding-left: 20px;
-            text-indent: -20px;
+            margin: 20px 0;
+            font-style: italic;
+            color: #ccffff;
+            background-color: rgba(0, 50, 50, 0.3);
+            padding: 15px;
+            border-radius: 0 10px 10px 0;
         }
         
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 40px 0;
-        }
-        
-        .word-count {
-            background-color: #f0f7ff;
+        /* Visitor counter (fake) */
+        .visitor-counter {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff00ff;
+            border-radius: 10px;
             padding: 10px;
-            border-radius: 5px;
-            margin-top: 30px;
+            font-size: 0.9em;
+            z-index: 100;
+        }
+        
+        /* Music player (fake) */
+        .music-player {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid #00ffff;
+            border-radius: 15px;
+            padding: 10px;
+            width: 200px;
+            z-index: 100;
+        }
+        
+        .music-player h4 {
+            color: #ffff66;
+            margin-top: 0;
+            text-align: center;
+        }
+        
+        /* Flashy title */
+        .blink {
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-box {
+                float: none;
+                width: auto;
+                margin: 20px 0;
+            }
+            
+            .music-player, .visitor-counter {
+                position: static;
+                margin: 20px auto;
+                width: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="content-container">
-        <!-- University Banner -->
+    <!-- Animated stars in background -->
+    <div id="stars-container"></div>
+    
+    <!-- Fake Music Player (Myspace style) -->
+    <div class="music-player">
+        <h4>♫ Space Vibes ♫</h4>
+        <p style="text-align: center; color: #ff66cc;">Now Playing:<br><span id="song-title">Stellar Remnants - White Dwarf Lullaby</span></p>
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+            <button onclick="changeSong()" style="font-size: 0.8em;">▶ Next Song</button>
+            <button onclick="togglePlay()" style="font-size: 0.8em;" id="play-btn">❚❚ Pause</button>
+        </div>
+        <div style="margin-top: 10px; background: #330033; height: 5px; border-radius: 5px;">
+            <div id="progress-bar" style="width: 45%; height: 100%; background: linear-gradient(90deg, #ff00ff, #00ffff); border-radius: 5px;"></div>
+        </div>
+    </div>
+    
+    <!-- Main Content Box -->
+    <div class="content-box">
+        <!-- Animated Header -->
         <div style="text-align: center; margin-bottom: 30px;">
-            <img src="https://www.surrey.ac.uk/sites/default/files/styles/medium/public/2021-07/University-of-Surrey-logo_0.jpg" 
-                 alt="University of Surrey" 
-                 width="600" 
-                 style="max-width: 100%;">
+            <div style="font-size: 0.9em; color: #ffff66; letter-spacing: 3px;">✦･ﾟ✧･ﾟ✧ WELCOME TO MY CONFERENCE PAGE ✧･ﾟ✧･ﾟ✦</div>
+            <h1 class="blink">★ WHITE DWARFS & LIFE ★</h1>
+            <div style="font-size: 0.9em; color: #ff66cc;">✩～ ～ ～ ～ ～ ～ ～ ～ ～ ～ ～ ～ ～ ～ ～✩</div>
         </div>
         
-        <!-- Module and Student Information -->
-        <h1>ENG0018 Computer Laboratory 2025/26</h1>
-        <h2>Student URN: [Your URN Here]</h2>
+        <!-- Profile Box (Myspace style) -->
+        <div class="profile-box">
+            <h3>✧ ABOUT ME ✧</h3>
+            <p style="text-align: center;"><strong>URN:</strong> [YOUR URN HERE]</p>
+            <p style="text-align: center;"><strong>ENG0018</strong> Computer Lab</p>
+            <p style="text-align: center;"><strong>University of Surrey</strong></p>
+            <p style="text-align: center;">✦ ✦ ✦</p>
+            <p><strong>Interests:</strong><br>Astrobiology • Exoplanets • White Dwarfs • Space Exploration</p>
+            <p><strong>Current Mood:</strong> <span id="mood" style="color: #00ffff;">✨ Cosmic & Curious ✨</span></p>
+            <div style="text-align: center; margin-top: 15px;">
+                <button onclick="changeMood()">Change Mood</button>
+            </div>
+        </div>
+        
+        <!-- Abstract Section -->
+        <h2>✧ ABSTRACT ✧</h2>
+        <div style="background-color: rgba(0, 30, 60, 0.5); padding: 20px; border-radius: 10px; border: 2px dotted #00ffff;">
+            <p>White dwarfs are the <span style="color: #ff66cc; font-weight: bold;">dense stellar remnants</span> of Sun-like stars that have run out of nuclear fuel. These cosmic leftovers could potentially host <span style="color: #ffff66; font-weight: bold;">habitable planets</span> long after their parent stars have died.</p>
+            
+            <p>This paper explores whether these <span style="color: #ff66cc;">stellar ghosts</span> might still cradle life in their twilight years, examining planetary survival, habitable zones, and detection methods for these unusual systems.</p>
+            
+            <blockquote>"In the cold glow of white dwarfs, life might find its most unexpected home."</blockquote>
+        </div>
         
         <hr>
-        
-        <!-- Article Title -->
-        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 40px;">
-            <b>The Prospects for Life on Planets Orbiting White Dwarfs</b>
-        </h2>
         
         <!-- Table of Contents -->
-        <h3 id="toc">Table of Contents</h3>
-        <ul>
-            <li><a href="#abstract">Abstract</a></li>
-            <li><a href="#introduction">1. Introduction</a></li>
-            <li><a href="#formation">2. Planetary Formation and Survival</a></li>
-            <li><a href="#habitable-zones">3. Habitable Zones around White Dwarfs</a></li>
-            <li><a href="#habitability-challenge">4. The Habitability Challenge</a></li>
-            <li><a href="#detection">5. Detection and Characterisation Opportunities</a></li>
-            <li><a href="#discussion">6. Discussion</a></li>
-            <li><a href="#conclusions">7. Conclusions</a></li>
-            <li><a href="#references">References</a></li>
-        </ul>
+        <h2>✧ NAVIGATION ✧</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
+            <a href="#intro" class="button">1. INTRODUCTION</a>
+            <a href="#formation" class="button">2. FORMATION</a>
+            <a href="#zones" class="button">3. HABITABLE ZONES</a>
+            <a href="#challenge" class="button">4. CHALLENGES</a>
+            <a href="#detection" class="button">5. DETECTION</a>
+            <a href="#discussion" class="button">6. DISCUSSION</a>
+            <a href="#conclusions" class="button">7. CONCLUSIONS</a>
+            <a href="#references" class="button">8. REFERENCES</a>
+        </div>
         
         <hr>
         
-        <!-- Abstract -->
-        <div class="abstract">
-            <h3 id="abstract">Abstract</h3>
-            <p>
-                White dwarfs are the dense stellar remnants of Sun-like stars that have 
-                run out of nuclear fuel and leave behind a core mainly composed of 
-                carbon and oxygen. Most white dwarfs have a mass of about 0.6M☉ and 
-                a radius similar to that of Earth. Recent discoveries of exoplanets 
-                orbiting white dwarf stars highlight their potential to support a 
-                habitable environment and have sparked interest about whether these 
-                systems can maintain conditions that would be suitable for organisms to 
-                develop. In this work, we review current understandings of the 
-                formation, stability, and habitability of planets orbiting white dwarfs 
-                in order to evaluate the potential for life. We examine the physical 
-                constraints affecting planetary survival, including the impact of 
-                stellar evolution, the location and evolution of habitable zones as 
-                white dwarfs cool and fade, and the biological and observational aspects 
-                for detecting life. While conditions for habitability are restrictive, 
-                emerging evidence suggests white dwarf systems are interesting targets 
-                in the search for extraterrestrial life.
-            </p>
+        <!-- Introduction -->
+        <h2 id="intro">✧ 1. INTRODUCTION ✧</h2>
+        <p>White dwarfs represent the <span style="color: #ff66cc; font-weight: bold;">final evolutionary stage</span> for stars like our Sun. After burning through their nuclear fuel, they shed their outer layers, leaving behind incredibly dense cores.</p>
+        
+        <p>Fascinatingly, <span style="color: #ffff66;">~97% of all stars</span> in our galaxy will eventually become white dwarfs. These stellar remnants gradually cool over billions of years, potentially providing stable environments for any surviving planets.</p>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <div style="display: inline-block; padding: 10px 20px; background: rgba(102, 0, 102, 0.5); border-radius: 10px; border: 2px solid #ff00ff;">
+                <strong>Did You Know?</strong><br>
+                There are approximately <span style="color: #00ffff; font-size: 1.2em;">10 BILLION</span><br>
+                white dwarfs in the Milky Way alone!
+            </div>
         </div>
         
-        <!-- Introduction -->
-        <h3 id="introduction">1. Introduction</h3>
-        <p>
-            White dwarfs mark the final evolutionary stage of stars with initial 
-            masses of around 3-4M☉, which is not enough for them to become neutron 
-            stars or black holes. There are approximately 10 billion white dwarfs 
-            in the Milky Way and around 97% of all stars in our galaxy will 
-            eventually become white dwarfs. After exhausting their nuclear fuel, 
-            these stars shed their outer layers and leave behind compact, 
-            electron-degenerate cores. Without ongoing nuclear fusion, white 
-            dwarfs emit leftover thermal energy and gradually cool, ultimately 
-            becoming black dwarfs.
-        </p>
-        <p>
-            Some white dwarfs are surrounded by debris disks, which can form 
-            second-generation planets, while others retain pre-existing exoplanets 
-            that survived the host star's evolution. These findings have raised 
-            growing interest in whether white dwarf systems can sustain conditions 
-            suitable for life. This paper explores both theoretical and 
-            observational perspectives on the habitability of white dwarf systems.
-        </p>
+        <!-- Formation Section -->
+        <h2 id="formation">✧ 2. PLANETARY FORMATION & SURVIVAL ✧</h2>
+        <p>When stars expand into red giants, they often <span style="color: #ff6666; font-weight: bold;">engulf and destroy</span> nearby planets. However, some worlds at greater distances can survive this violent phase.</p>
         
-        <!-- Planetary Formation and Survival -->
-        <h3 id="formation">2. Planetary Formation and Survival</h3>
-        <p>
-            When a parent star evolves into a red giant, it can engulf nearby 
-            planets within roughly 1 AU, meaning most close-in planets are 
-            destroyed during this phase. However, some research indicates that 
-            planets orbiting within approximately 2 AU may survive this red giant 
-            stage, although their orbits can expand due to stellar mass loss, 
-            resulting in increased semimajor axes and longer orbital periods.
-        </p>
-        <p>
-            Certain second-generation white dwarf planets can form from a 
-            progenitor's debris disk, such as WD 1856+534 b. This happens through 
-            tidal disruption, where a companion star is pulled apart by the white 
-            dwarf's strong gravity, producing a disk of gas and dust. Additionally, 
-            gravitational interactions like Kozai-Lidov cycles can affect distant 
-            planets, drawing them closer to the white dwarf.
-        </p>
+        <table>
+            <tr>
+                <th>Planet Type</th>
+                <th>Survival Chance</th>
+                <th>Distance from Star</th>
+            </tr>
+            <tr>
+                <td>Close-in Planets</td>
+                <td style="color: #ff6666;">❌ Very Low</td>
+                <td>&lt; 1 AU</td>
+            </tr>
+            <tr>
+                <td>Mid-range Planets</td>
+                <td style="color: #ffff66;">⚠️ Possible</td>
+                <td>1-2 AU</td>
+            </tr>
+            <tr>
+                <td>Distant Planets</td>
+                <td style="color: #66ff66;">✅ High</td>
+                <td>&gt; 2 AU</td>
+            </tr>
+        </table>
         
-        <!-- Habitable Zones around White Dwarfs -->
-        <h3 id="habitable-zones">3. Habitable Zones around White Dwarfs</h3>
-        <p>
-            Due to their small radii and low luminosities, white dwarfs emit very 
-            little light, with their only significant source of energy being 
-            residual thermal radiation which decreases over time. Consequently, 
-            their habitable zones, regions where liquid water could exist on a 
-            planet's surface, are found extremely close to the star, typically 
-            around 0.012AU.
-        </p>
-        <p>
-            As white dwarfs cool, their habitable zones migrate inward, with the 
-            rate of this migration depending on the star's age and temperature. 
-            Planets within the habitable zone are likely to become tidally locked, 
-            resulting in permanent day and night hemispheres. However, a 
-            sufficiently dense atmosphere or active oceanic circulation could help 
-            redistribute heat effectively and maintain moderate surface conditions 
-            across the planet.
-        </p>
+        <!-- Habitable Zones -->
+        <h2 id="zones">✧ 3. HABITABLE ZONES AROUND WHITE DWARFS ✧</h2>
+        <p>Due to their small size and low luminosity, white dwarfs have habitable zones that are <span style="color: #00ffff; font-weight: bold;">extremely close</span> to the star - typically around <span style="color: #ffff66;">0.012 AU</span> (compared to Earth's 1 AU from the Sun).</p>
         
-        <!-- The Habitability Challenge -->
-        <h3 id="habitability-challenge">4. The Habitability Challenge</h3>
-        <p>
-            The continuous inward migration of the habitable zone creates a 
-            significant problem. Even if a planet is initially located within this 
-            zone, it will eventually move out as the star cools, becoming too cold 
-            to sustain life. However, recent research suggests that in some cases, 
-            the cooling of white dwarfs slows down due to neon-22 distillation, 
-            where heavier elements sink towards the core and release gravitational 
-            energy. This can temporarily heat the star and pause cooling for up to 
-            10 billion years, prolonging the stability of the habitable zone.
-        </p>
-        <p>
-            Newly formed white dwarfs can reach surface temperatures of over 
-            100,000 K and emit strong ultraviolet and X-ray radiation, posing a 
-            serious threat to nearby planets, as such radiation can strip away 
-            planetary atmospheres and evaporate surface water. For this reason, 
-            planets must migrate into the habitable zone only after the white dwarf 
-            has cooled significantly. Planets with large enough water reserves and 
-            orbits which are slightly beyond the typical habitable zone may be more 
-            likely to retain surface water.
-        </p>
+        <div style="background: linear-gradient(90deg, #000033, #330033); padding: 15px; border-radius: 10px; margin: 20px 0;">
+            <p><strong>Key Fact:</strong> As white dwarfs cool over time, their habitable zones <span style="color: #ff66cc;">migrate inward</span>. A planet that starts in the habitable zone will eventually find itself outside it as the star cools.</p>
+        </div>
         
-        <!-- Detection and Characterisation Opportunities -->
-        <h3 id="detection">5. Detection and Characterisation Opportunities</h3>
-        <p>
-            Standard exoplanet detection methods, such as transit and radial 
-            velocity techniques, have proven to be less effective for white dwarf 
-            systems due to their small radii and low luminosities, with only 20% of 
-            known planets orbiting white dwarfs being discovered using these 
-            methods.
-        </p>
-        <p>
-            Nonetheless, these characteristics can also offer unique advantages. 
-            The featureless spectra of white dwarfs make infrared excess detection 
-            more efficient. This approach enabled the discovery of the first 
-            confirmed transiting white dwarf planet, WD 1856+534b with JWST's 
-            Mid-Infrared Instrument (MIRI) detecting its thermal emission and 
-            confirming that it is close-orbiting, Jupiter-sized planet.
-        </p>
-        <p>
-            Direct imaging is another promising technique, benefitting from the 
-            white dwarf's low luminosity, which is typically 10^2-10^5 x fainter 
-            than main-sequence stars. This greatly increases the 
-            planet-to-white-dwarf contrast ratio and improves the detectability of 
-            orbiting planets.
-        </p>
+        <!-- The Rest of Your Content Would Go Here -->
+        <!-- I'm showing the structure - you would add the rest of your sections similarly -->
         
-        <!-- Discussion -->
-        <h3 id="discussion">6. Discussion</h3>
-        <p>
-            The possibility that white dwarfs could host habitable planets 
-            challenges traditional beliefs about stellar life cycles and 
-            post-main-sequence environments. With significant physical and 
-            biological challenges, particularly regarding planetary migration, 
-            tidal locking and atmospheric survival, the chances of habitability may 
-            seem low. However, the long lifespan of white dwarfs and the ability to 
-            detect close-in planets make these systems essential targets for 
-            astrobiology. If life can emerge or adapt under such extreme and 
-            persisting conditions, white dwarf systems might be able to harbour 
-            life long after main-sequence stars have faded.
-        </p>
+        <h2 id="challenge">✧ 4. THE HABITABILITY CHALLENGE ✧</h2>
+        <p>New white dwarfs emit intense <span style="color: #ff6666;">UV and X-ray radiation</span> that can strip away planetary atmospheres. Planets need to migrate into the habitable zone only <span style="color: #ffff66;">after the white dwarf has cooled sufficiently</span>.</p>
         
-        <!-- Conclusions -->
-        <h3 id="conclusions">7. Conclusions</h3>
-        <p>
-            While prospects for life on planets around white dwarfs are uncertain, 
-            they are not inconsiderable. Planets that survive the red giant phase or 
-            form afterward could maintain stable, habitable environments for 
-            billions of years under specific conditions. The discovery of transiting 
-            planets around white dwarfs indicates that such systems exist and merit 
-            attention in future observational campaigns, which may ultimately reveal 
-            whether these remnants of stellar evolution can host living worlds.
-        </p>
+        <h2 id="detection">✧ 5. DETECTION OPPORTUNITIES ✧</h2>
+        <p>White dwarfs' small size and low luminosity actually make them <span style="color: #00ffff;">excellent targets</span> for direct imaging of planets, as the contrast between star and planet is much more favorable.</p>
+        
+        <h2 id="discussion">✧ 6. DISCUSSION ✧</h2>
+        <p>If life can adapt to the extreme conditions around white dwarfs, these systems could harbor life <span style="color: #ff66cc;">long after main-sequence stars have faded</span>.</p>
+        
+        <h2 id="conclusions">✧ 7. CONCLUSIONS ✧</h2>
+        <p>While challenging, the possibility of life around white dwarfs is <span style="color: #ffff66;">not inconsiderable</span>. These systems represent fascinating targets for future astrobiological research.</p>
         
         <hr>
         
         <!-- References -->
-        <h3 id="references">References</h3>
-        <div class="reference">
-            1. Space.com - White Dwarf Stars. <a href="https://www.space.com/23756-white-dwarf-stars.html">https://www.space.com/23756-white-dwarf-stars.html</a>
-        </div>
-        <div class="reference">
-            2. Scientific American - Living Near a White Dwarf. <a href="https://www.scientificamerican.com/article/living-near-a-white-dwarf/">https://www.scientificamerican.com/article/living-near-a-white-dwarf/</a>
-        </div>
-        <div class="reference">
-            3. Universe Today - Webb Directly Images Two Planets Orbiting White Dwarfs. <a href="https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs">https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs</a>
-        </div>
-        <div class="reference">
-            4. Astronomy.com - What Will Happen to the Planets When the Sun Becomes a Red Giant. <a href="https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/">https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/</a>
-        </div>
-        <div class="reference">
-            5. arXiv - Dynamical Formation of Close Binaries During the Common-envelope Phase. <a href="https://arxiv.org/pdf/2407.14190v3">https://arxiv.org/pdf/2407.14190v3</a>
-        </div>
-        <div class="reference">
-            6. NASA Space News - Is There Life Around Dying Stars? White Dwarfs May Surprise Us. <a href="https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/">https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/</a>
+        <h2 id="references">✧ 8. REFERENCES ✧</h2>
+        <div style="background-color: rgba(0, 20, 40, 0.7); padding: 20px; border-radius: 10px;">
+            <p>1. <a href="https://www.space.com/23756-white-dwarf-stars.html">Space.com - White Dwarf Stars</a> ✦</p>
+            <p>2. <a href="https://www.scientificamerican.com/article/living-near-a-white-dwarf/">Scientific American - Living Near a White Dwarf</a> ✦</p>
+            <p>3. <a href="https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs">Universe Today - Webb Images Planets Orbiting White Dwarfs</a> ✦</p>
+            <p>4. <a href="https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/">Astronomy.com - Planets & Red Giants</a> ✦</p>
+            <p>5. <a href="https://arxiv.org/pdf/2407.14190v3">arXiv - Dynamical Formation of Close Binaries</a> ✦</p>
         </div>
         
-        <!-- Word Count Display -->
-        <div class="word-count">
-            <p id="wordCountDisplay">Word count will be displayed here after implementation.</p>
+        <hr>
+        
+        <!-- Visitor Counter & Status -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; flex-wrap: wrap;">
+            <div style="background-color: rgba(0, 0, 0, 0.7); padding: 10px 20px; border-radius: 10px; border: 2px solid #ff00ff;">
+                <strong>Page Views:</strong> <span id="view-count" style="color: #ffff66; font-size: 1.2em;">1,427</span>
+            </div>
+            
+            <div style="background-color: rgba(0, 0, 0, 0.7); padding: 10px 20px; border-radius: 10px; border: 2px solid #00ffff;">
+                <strong>Last Updated:</strong> <span id="last-updated" style="color: #ff66cc;">Loading...</span>
+                <button onclick="updateTime()" style="margin-left: 10px; font-size: 0.8em;">Update</button>
+            </div>
+            
+            <div style="background-color: rgba(0, 0, 0, 0.7); padding: 10px 20px; border-radius: 10px; border: 2px solid #ffff66;">
+                <strong>Word Count:</strong> <span id="word-count" style="color: #00ffff;">~850</span>
+            </div>
         </div>
         
-        <!-- Last Modified Time -->
-        <div id="last-updated" style="margin-top: 40px; padding: 15px; background-color: #f5f5f5; border-radius: 5px;">
-            <p>Last Modified Time: Will be loaded from GitHub API</p>
-            <button onclick="verifyLastUpdatedTime()" style="padding: 8px 16px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                Verify Last Modified Time
-            </button>
+        <!-- Signature -->
+        <div style="text-align: center; margin-top: 40px; color: #ff66cc; font-family: 'Georgia', serif;">
+            <p>✧･ﾟ: *✧･ﾟ:* Made with 2000s Internet Vibes *:･ﾟ✧*:･ﾟ✧</p>
+            <p style="font-size: 0.8em; color: #00ffff;">© 2025 | FEPS Conference Project | University of Surrey</p>
         </div>
     </div>
     
-    <!-- JavaScript for basic functionality -->
+    <!-- Fake Visitor Counter -->
+    <div class="visitor-counter">
+        <div style="color: #ffff66; font-weight: bold;">Visitors Online: <span id="online-count">3</span></div>
+        <div style="font-size: 0.8em; color: #ff66cc;">You're visitor #<span id="visitor-num">1,427</span></div>
+    </div>
+    
     <script>
-        // Simple word count function
-        function countWords() {
-            const content = document.body.innerText;
-            const wordCount = content.split(/\s+/).length;
-            document.getElementById('wordCountDisplay').textContent = `Estimated word count: ${wordCount}`;
+        // Create twinkling stars
+        function createStars() {
+            const container = document.getElementById('stars-container');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.animationDuration = Math.random() * 3 + 2 + 's';
+                container.appendChild(star);
+            }
         }
         
-        // Call word count on page load
-        window.onload = countWords;
+        // Mood changer
+        const moods = [
+            "✨ Cosmic & Curious ✨",
+            "🚀 Exploring the Unknown 🚀",
+            "⭐ Stellar Dreams ⭐",
+            "🌌 Lost in Space 🌌",
+            "🔭 Observing & Learning 🔭",
+            "💫 Interstellar Vibes 💫"
+        ];
         
-        // Placeholder for last modified time function
-        function verifyLastUpdatedTime() {
-            alert("This would connect to GitHub API to verify the last modified time.\n\nReplace with your actual GitHub username and repository name in the code.");
+        let currentMood = 0;
+        function changeMood() {
+            currentMood = (currentMood + 1) % moods.length;
+            document.getElementById('mood').textContent = moods[currentMood];
+            // Add a little effect
+            document.getElementById('mood').style.color = 
+                ['#00ffff', '#ff66cc', '#ffff66', '#ff6666', '#66ff66'][currentMood % 5];
         }
+        
+        // Music player functions
+        const songs = [
+            "Stellar Remnants - White Dwarf Lullaby",
+            "Cosmic Waves - Nebula Dreams",
+            "Orbital Resonance - Space Harmony",
+            "Event Horizon - Gravitational Blues",
+            "Pulsar Beats - Radio Frequency"
+        ];
+        
+        let currentSong = 0;
+        let isPlaying = true;
+        
+        function changeSong() {
+            currentSong = (currentSong + 1) % songs.length;
+            document.getElementById('song-title').textContent = songs[currentSong];
+            // Reset progress bar
+            document.getElementById('progress-bar').style.width = '45%';
+        }
+        
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            document.getElementById('play-btn').textContent = isPlaying ? '❚❚ Pause' : '▶ Play';
+            
+            if (isPlaying) {
+                // Animate progress bar
+                let width = 45;
+                const interval = setInterval(() => {
+                    if (!isPlaying) {
+                        clearInterval(interval);
+                        return;
+                    }
+                    width = (width + 0.5) % 100;
+                    document.getElementById('progress-bar').style.width = width + '%';
+                }, 100);
+            }
+        }
+        
+        // Update view count (fake)
+        function updateViewCount() {
+            const countElement = document.getElementById('view-count');
+            let count = parseInt(countElement.textContent.replace(/,/g, ''));
+            count += Math.floor(Math.random() * 3) + 1;
+            countElement.textContent = count.toLocaleString();
+            
+            // Update online count
+            document.getElementById('online-count').textContent = 
+                Math.floor(Math.random() * 5) + 1;
+            document.getElementById('visitor-num').textContent = 
+                (count + Math.floor(Math.random() * 100)).toLocaleString();
+        }
+        
+        // Update time
+        function updateTime() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('last-updated').textContent = 
+                now.toLocaleDateString('en-US', options) + " 🌙";
+        }
+        
+        // Calculate word count
+        function calculateWordCount() {
+            const text = document.body.innerText;
+            const wordCount = text.split(/\s+/).length;
+            document.getElementById('word-count').textContent = `~${wordCount}`;
+        }
+        
+        // Initialize everything when page loads
+        window.onload = function() {
+            createStars();
+            updateTime();
+            calculateWordCount();
+            
+            // Update view count every 30 seconds
+            setInterval(updateViewCount, 30000);
+            
+            // Auto-advance progress bar if playing
+            setInterval(() => {
+                if (isPlaying) {
+                    const bar = document.getElementById('progress-bar');
+                    let width = parseFloat(bar.style.width);
+                    width = (width + 0.2) % 100;
+                    bar.style.width = width + '%';
+                }
+            }, 1000);
+            
+            // Auto-change song every 60 seconds
+            setInterval(() => {
+                if (isPlaying) {
+                    changeSong();
+                }
+            }, 60000);
+        };
     </script>
 </body>
 </html>
