@@ -6,7 +6,7 @@
     <title>The Prospects for Life on Planets Orbiting White Dwarfs</title>
     
     <style>
-        /* TUMBLR/MYSPACE VIBES - SIMPLIFIED */
+        
         body {
             font-family: 'Courier New', monospace;
             background-color: #0a0a1a;
@@ -21,7 +21,7 @@
             margin: 0 auto;
         }
         
-        /* Blinking stars in background */
+        /* twinkling stars */
         @keyframes twinkle {
             0%, 100% { opacity: 0.2; }
             50% { opacity: 1; }
@@ -35,7 +35,7 @@
             z-index: -1;
         }
         
-        /* Main content box */
+        /* main text box */
         .content-box {
             background-color: rgba(10, 10, 30, 0.85);
             border: 4px solid #ff00ff;
@@ -47,7 +47,7 @@
                 inset 0 0 20px rgba(0, 255, 255, 0.2);
         }
         
-        /* Tumblr-style headings */
+        /* headings */
         h1, h2, h3 {
             font-family: 'Georgia', serif;
             text-shadow: 0 0 10px currentColor;
@@ -74,7 +74,7 @@
             margin-top: 30px;
         }
         
-        /* Retro links */
+        /* links */
         a {
             color: #ff66cc;
             text-decoration: none;
@@ -86,7 +86,7 @@
             text-shadow: 0 0 10px #00ffff;
         }
         
-        /* Simplified buttons */
+        /* buttons */
         .button {
             background: linear-gradient(to bottom, #ff66cc, #cc0099);
             border: 1px solid #ffff66;
@@ -100,7 +100,7 @@
             text-shadow: 1px 1px 2px black;
         }
         
-        /* Simple divider */
+        /* divider */
         hr {
             border: none;
             height: 2px;
@@ -128,7 +128,7 @@
             transform: translateX(-50%);
         }
         
-        /* Abstract styling */
+        /* abstract */
         .abstract {
             background-color: rgba(0, 30, 60, 0.5);
             padding: 20px;
@@ -137,7 +137,7 @@
             margin: 20px 0;
         }
         
-        /* Harvard Reference styling */
+        /* harvard references */
         .harvard-reference {
             margin-bottom: 12px;
             padding-left: 15px;
@@ -148,7 +148,7 @@
             border-radius: 0 5px 5px 0;
         }
         
-        /* Word count display */
+        /* word count */
         .word-count {
             margin-top: 30px;
             padding: 10px;
@@ -157,7 +157,7 @@
             text-align: center;
         }
         
-        /* Last updated display */
+        /* last time updated */
         .last-updated {
             margin-top: 20px;
             padding: 10px;
@@ -166,17 +166,17 @@
             text-align: center;
         }
         
-        /* Paragraph styling */
+        /* paragraphs */
         p {
             margin-bottom: 20px;
         }
         
-        /* Section content */
+        /* sections */
         .section-content {
             margin-bottom: 30px;
         }
         
-        /* In-text citations */
+        /* in text citations */
         .citation {
             color: #ffff66;
             font-style: italic;
@@ -378,9 +378,27 @@
         
         // Calculate word count
         function calculateWordCount() {
-            const text = document.body.innerText;
-            const wordCount = text.split(/\s+/).length;
-            document.getElementById('word-count-display').textContent = `~${wordCount} words`;
+
+            const sections = [
+        'introduction',
+        'formation', 
+        'habitable-zones',
+        'challenge',
+        'detection',
+        'discussion',
+        'conclusions'
+    ];
+        let totalWords = 0;
+
+        sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const text = section.innerText || section.textContent;
+            const words = text.split(/\s+/).length;
+            totalWords += words;
+        }
+    });
+        document.getElementById('word-count-display').textContent = `~${totalWords} words`;
         }
         
         // Update time
