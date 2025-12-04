@@ -226,113 +226,88 @@
     <video src="ENG0018 Presentation.mp4" width="800" height="450" controls></video>
     <hr>
 
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Last commit time display -->
-    <div id="last-updated">Loading last update time...</div>
-    <!-- Verify Button -->
-    <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-        Verify Last Modified Time
-    </button>
+    <!-- Time Stamp from H3 Worksheet -->
+<div id="last-updated">Loading last update time...</div>
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    Verify Last Modified Time
+</button>
 
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Placeholder for total word count -->
-    <p id="totalWordCount"></p>
-    <hr>
-
-    <script>
-        // Timestamp code - FIXED version
-        async function getLastUpdatedTime() {
-            const username = 'nr0025';
-            const repo = 'FY0025';
-           
-            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-            try {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/vnd.github.v3+json',
-                    }
-                });
-                if (!response.ok) {
-                    throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+<script>
+    async function getLastUpdatedTime() {
+        const username = 'FEPSFY6922716';
+        const repo = 'FY6922716';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
                 }
-                const commits = await response.json();
-                if (commits && commits.length > 0) {
-                    const lastCommitDate = new Date(commits[0].commit.committer.date);
-                   
-                    // Format date correctly for UK format
-                    const options = { 
-                        year: 'numeric', 
-                        month: '2-digit', 
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        second: '2-digit',
-                        hour12: false,
-                        timeZone: 'Europe/London'
-                    };
-                    
-                    const formattedDate = lastCommitDate.toLocaleString('en-GB', options);
-                    document.getElementById('last-updated').innerText = `Last Modified Time: ${formattedDate}`;
-                } else {
-                    document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-                }
-            } catch (error) {
-                console.error('Error fetching the last updated time:', error);
-                document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
-            }
-        }
-        
-        // Function to verify the last update time by re-fetching it from the API
-        async function verifyLastUpdatedTime() {
-            document.getElementById('last-updated').innerText = 'Verifying...';
-            await getLastUpdatedTime();
-            alert("Last modified time has been successfully verified from GitHub API.");
-        }
-
-        // NEW Word count function - counts ALL paragraphs with class "main-text"
-        function displayTotalWordCount() {
-            // Get all paragraphs with class "main-text"
-            const mainTextParagraphs = document.querySelectorAll('p.main-text');
-            let totalWords = 0;
-            
-            mainTextParagraphs.forEach(paragraph => {
-                // Get text content and remove any HTML tags
-                let text = paragraph.textContent || paragraph.innerText;
-                
-                // Clean up the text - remove extra whitespace
-                text = text.trim();
-                
-                // Split into words (spaces, tabs, newlines)
-                const words = text.split(/\s+/);
-                
-                // Filter out empty strings
-                const validWords = words.filter(word => word.length > 0);
-                
-                // Add to total
-                totalWords += validWords.length;
             });
-            
-            // Display the total word count
-            document.getElementById("totalWordCount").innerText = `Total word count: ${totalWords}`;
-            
-            // Optional: Log to console for debugging
-            console.log(`Word count calculated: ${totalWords} words`);
-            console.log(`Number of paragraphs counted: ${mainTextParagraphs.length}`);
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
         }
+    }
+   
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+   
+    window.onload = getLastUpdatedTime;
+</script>
 
-        // Combined initialization function
-        function initializePage() {
-            getLastUpdatedTime();
-            displayTotalWordCount();
-        }
+<!-- Word Count from H3 Worksheet -->
+<p id="totalWordCount"></p>
+<hr>
 
-        // Initial load to display the time and word count on page load
-        window.onload = initializePage;
-    </script>
-</body>
-</html>
+<script>
+  function displayWordCount(sectionId) {
+    const text = document.getElementById(sectionId).textContent;
+    const wordArray = text.trim().split(/\s+/);
+    const wordCount = wordArray.length;
+    return wordCount;
+  }
+
+  function displayTotalWordCount() {
+    const AbstractCount = displayWordCount("Abstract_InText");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const FormationAndSurvivalCount = displayWordCount("FormationAndSurvival_InText");
+    const HabitableZonesCount = displayWordCount("HabitableZones_InText");
+    const HabitabilityChallengeCount = displayWordCount("HabitabilityChallenge_InText");
+    const DetectionCount = displayWordCount("Detection_InText");
+    const DiscussionCount = displayWordCount("Discussion_InText");
+    const ConclusionsCount = displayWordCount("Conclusions_InText");
+   
+    const totalWordCount =
+          AbstractCount +
+          IntroductionCount +
+          FormationAndSurvivalCount +
+          HabitableZonesCount +
+          HabitabilityChallengeCount +
+          DetectionCount +
+          DiscussionCount +
+          ConclusionsCount;
+   
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+
+  window.onload = function() {
+    getLastUpdatedTime();
+    displayTotalWordCount();
+  };
+</script>
