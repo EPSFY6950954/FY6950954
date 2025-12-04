@@ -24,6 +24,17 @@
         p.ex1 {
             margin-left: 50px;
         }
+        
+        /* Citation link styling */
+        .citation-link {
+            color: #00549E;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .citation-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body style="background-color:#FFFFFF;margin-left:50px;">
@@ -83,35 +94,35 @@
     <!-- From H2: Abstract Section -->
     <h3 id="Abstract">Abstract</h3>
     <p class="ex1">
-        White dwarfs are the dense stellar remnants of Sun like stars that have run out of nuclear fuel and leave behind a core mainly composed of carbon and oxygen, with the majority having a mass of about 0.6M☉ and a radius like that of Earth (Whyte et al., 2024). Recent discoveries of exoplanets orbiting white dwarf stars have highlighted their potential to support a habitable environment and sparked interest about whether these systems could maintain conditions that would be suitable for organisms to develop. In this work, we review current understandings of the formation, stability, and habitability of planets orbiting white dwarfs to evaluate their potential for life. We examine the physical constraints affecting planetary survival, including the impact of stellar evolution, the location and evolution of habitable zones as white dwarfs cool and fade, and the biological and observational aspects for detecting life. Whilst conditions for habitability are restrictive, emerging evidence suggests white dwarf systems are interesting targets in the search for extraterrestrial life.
+        White dwarfs are the dense stellar remnants of Sun like stars that have run out of nuclear fuel and leave behind a core mainly composed of carbon and oxygen, with the majority having a mass of about 0.6M☉ and a radius like that of Earth (<a href="#Whyte2024" class="citation-link">Whyte et al., 2024</a>). Recent discoveries of exoplanets orbiting white dwarf stars have highlighted their potential to support a habitable environment and sparked interest about whether these systems could maintain conditions that would be suitable for organisms to develop. In this work, we review current understandings of the formation, stability, and habitability of planets orbiting white dwarfs to evaluate their potential for life. We examine the physical constraints affecting planetary survival, including the impact of stellar evolution, the location and evolution of habitable zones as white dwarfs cool and fade, and the biological and observational aspects for detecting life. Whilst conditions for habitability are restrictive, emerging evidence suggests white dwarf systems are interesting targets in the search for extraterrestrial life.
     </p>
     
     <!-- Introduction Section -->
     <h3 id="Introduction">Introduction</h3>
     <p class="ex1" id="Introduction_InText">
-        White dwarfs mark the final evolutionary stage of stars with initial masses of around 3-4M☉. Approximately 10 billion exist in the Milky Way, with around 97% of stars in our galaxy eventually becoming white dwarfs (Nola Taylor Redd, 2018). After exhausting their nuclear fuel, these stars shed their outer layers and leave behind compact, electron degenerate cores. Without ongoing nuclear fusion, white dwarfs emit leftover thermal energy and ultimately become black dwarfs.
+        White dwarfs mark the final evolutionary stage of stars with initial masses of around 3-4M☉. Approximately 10 billion exist in the Milky Way, with around 97% of stars in our galaxy eventually becoming white dwarfs (<a href="#Redd2018" class="citation-link">Nola Taylor Redd, 2018</a>). After exhausting their nuclear fuel, these stars shed their outer layers and leave behind compact, electron degenerate cores. Without ongoing nuclear fusion, white dwarfs emit leftover thermal energy and ultimately become black dwarfs.
         
-        Some white dwarfs are surrounded by debris disks, which can form second generation planets, while others retain pre-existing exoplanets that survived the host star's evolution (Gough, 2024). These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life. This paper explores both the theoretical and observational perspectives.
+        Some white dwarfs are surrounded by debris disks, which can form second generation planets, while others retain pre-existing exoplanets that survived the host star's evolution (<a href="#Gough2024" class="citation-link">Gough, 2024</a>). These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life. This paper explores both the theoretical and observational perspectives.
     </p>
     
     <!-- Planetary Formation & Survival Section -->
     <h3 id="Formation">Planetary Formation & Survival</h3>
     <p class="ex1" id="Formation_InText">
-        When a parent star evolves into a red giant, it can engulf nearby planets within roughly 1 AU (Staff, 2020), meaning most close-in planets are destroyed during this phase. However, some research indicates that planets orbiting within approximately 2 AU may survive (Physics World, 2007). Although, their orbits can expand due to stellar mass loss, resulting in increased semimajor axes and longer orbital periods.
+        When a parent star evolves into a red giant, it can engulf nearby planets within roughly 1 AU (<a href="#Staff2020" class="citation-link">Staff, 2020</a>), meaning most close-in planets are destroyed during this phase. However, some research indicates that planets orbiting within approximately 2 AU may survive (<a href="#PhysicsWorld2007" class="citation-link">Physics World, 2007</a>). Although, their orbits can expand due to stellar mass loss, resulting in increased semimajor axes and longer orbital periods.
         
-        Certain second generation white dwarf planets can form from a progenitor's debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf's strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf (Klein and Katz, 2023).
+        Certain second generation white dwarf planets can form from a progenitor's debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf's strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf (<a href="#Klein2023" class="citation-link">Klein and Katz, 2023</a>).
     </p>
     
     <!-- Habitable Zones Section -->
     <h3 id="HabitableZones">Habitable Zones</h3>
     <p class="ex1" id="HabitableZones_InText">
-        Due to their small radii and low luminosities, white dwarfs emit very little light, with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet's surface, are found extremely close to the star, typically around 0.012AU (Whyte et al., 2024).
+        Due to their small radii and low luminosities, white dwarfs emit very little light, with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet's surface, are found extremely close to the star, typically around 0.012AU (<a href="#Whyte2024" class="citation-link">Whyte et al., 2024</a>).
         
         As white dwarfs cool, their habitable zones migrate inward, the rate depending on the star's age and temperature. Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres. However, a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions.
     </p>
     
     <!-- Habitable Zones Comparison Table -->
-    <p class="ex1">
+    <p class="ex1" id="ComparisonTable_InText">
         <table>
             <tr>
                 <th>Star Type</th>
@@ -126,13 +137,13 @@
                 <td>0.5 - 10 days</td>
             </tr>
             <tr>
-                <td><strong>G-Type</strong></td>
+                <td><strong>G-Type (Sun-like)</strong></td>
                 <td>0.95 - 1.37 AU</td>
                 <td>5,500 - 6,000 K</td>
                 <td>300 - 500 days</td>
             </tr>
             <tr>
-                <td><strong>Red Dwarf</strong></td>
+                <td><strong>Red Dwarf (M-Type)</strong></td>
                 <td>0.1 - 0.4 AU</td>
                 <td>2,500 - 3,500 K</td>
                 <td>20 - 100 days</td>
@@ -141,15 +152,15 @@
     </p>
     
     <p class="ex1" style="text-align: center; font-style: italic;">
-        <strong>Table 1:</strong> Comparison of habitable zone characteristics for different star types.(Whyte et al., 2024).
+        <strong>Table 1:</strong> Comparison of habitable zone characteristics for different star types. White dwarfs have habitable zones significantly closer than main sequence stars due to their small radii and low luminosities (<a href="#Whyte2024" class="citation-link">Whyte et al., 2024</a>).
     </p>
     
     <!-- The Habitability Challenge Section -->
     <h3 id="Habitability">The Habitability Challenge</h3>
     <p class="ex1" id="Habitability_InText">
-        This continuous inward migration of the habitable zone creates a significant problem. Even if a planet is initially located within this zone, it will eventually move out as the star cools and become too cold to sustain life. However, recent research suggests that in some cases, the cooling of white dwarfs slows down due to neon-22 distillation, where heavier elements sink towards the core and release gravitational energy (nasaspacenews, 2025). This can temporarily heat the star and pause cooling for up to 10 billion years, prolonging the stability of the habitable zone.
+        This continuous inward migration of the habitable zone creates a significant problem. Even if a planet is initially located within this zone, it will eventually move out as the star cools and become too cold to sustain life. However, recent research suggests that in some cases, the cooling of white dwarfs slows down due to neon-22 distillation, where heavier elements sink towards the core and release gravitational energy (<a href="#NASA2025" class="citation-link">nasaspacenews, 2025</a>). This can temporarily heat the star and pause cooling for up to 10 billion years, prolonging the stability of the habitable zone.
         
-        Newly formed white dwarfs can reach surface temperatures of over 100,000 K and emit strong ultraviolet and X-ray radiation, posing a serious threat to nearby planets because it can strip away atmospheres and evaporate surface water. Therefore, planets must migrate into the habitable zone only after the white dwarf has cooled significantly. Those with large enough water reserves and orbits which are beyond the typical habitable zone may be more likely to retain surface water (Tognetti, 2025).
+        Newly formed white dwarfs can reach surface temperatures of over 100,000 K and emit strong ultraviolet and X-ray radiation, posing a serious threat to nearby planets because it can strip away atmospheres and evaporate surface water. Therefore, planets must migrate into the habitable zone only after the white dwarf has cooled significantly. Those with large enough water reserves and orbits which are beyond the typical habitable zone may be more likely to retain surface water (<a href="#Tognetti2025" class="citation-link">Tognetti, 2025</a>).
     </p>
     
     <!-- Detection & Characterisation Section -->
@@ -159,7 +170,7 @@
         
         However, these characteristics make infrared excess detection more efficient. Using this approach, the first confirmed transiting white dwarf planet, WD 1856+534b, was discovered with JWST's Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close orbiting, Jupiter sized planet.
         
-        Direct imaging is another promising technique, benefitting from the white dwarf's low luminosity, which is typically 10²-10⁵ times fainter than main sequence stars. This greatly increases the planet to white dwarf contrast ratio and improves the detectability of orbiting planets (Limbach et al., 2022).
+        Direct imaging is another promising technique, benefitting from the white dwarf's low luminosity, which is typically 10²-10⁵ times fainter than main sequence stars. This greatly increases the planet to white dwarf contrast ratio and improves the detectability of orbiting planets (<a href="#Limbach2022" class="citation-link">Limbach et al., 2022</a>).
     </p>
     
     <!-- Discussion Section -->
@@ -176,24 +187,24 @@
     
     <!-- References Section -->
     <h3 id="References">References</h3>
-    <p class="ex1">
-        Whyte, C.T., Quiroga-Nuñez, L.H., Lingam, M. and Pinilla, P. (2024). Potential for Life to Exist and be Detected on Earth-like Planets Orbiting White Dwarfs. <i>The Astrophysical Journal Letters</i>, 977(2), p.L38. doi:https://doi.org/10.3847/2041-8213/ad9821.<br><br>
+    <p class="ex1" id="ReferencesText">
+        <span id="Whyte2024">Whyte, C.T., Quiroga-Nuñez, L.H., Lingam, M. and Pinilla, P. (2024). Potential for Life to Exist and be Detected on Earth-like Planets Orbiting White Dwarfs. <i>The Astrophysical Journal Letters</i>, 977(2), p.L38. doi:https://doi.org/10.3847/2041-8213/ad9821.</span><br><br>
         
-        Nola Taylor Redd (2018). <i>White Dwarfs: Compact Corpses of Stars</i>. [online] Space.com. Available at: https://www.space.com/23756-white-dwarf-stars.html.<br><br>
+        <span id="Redd2018">Nola Taylor Redd (2018). <i>White Dwarfs: Compact Corpses of Stars</i>. [online] Space.com. Available at: https://www.space.com/23756-white-dwarf-stars.html.</span><br><br>
         
-        Gough, E. (2024). <i>Webb Directly Images Two Planets Orbiting White Dwarfs</i>. [online] Universe Today. Available at: https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs.<br><br>
+        <span id="Gough2024">Gough, E. (2024). <i>Webb Directly Images Two Planets Orbiting White Dwarfs</i>. [online] Universe Today. Available at: https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs.</span><br><br>
         
-        Staff, A. (2020). <i>What will happen to the planets when the Sun becomes a red giant?</i> [online] Astronomy Magazine. Available at: https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/.<br><br>
+        <span id="Staff2020">Staff, A. (2020). <i>What will happen to the planets when the Sun becomes a red giant?</i> [online] Astronomy Magazine. Available at: https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/.</span><br><br>
         
-        Physics World. (2007). <i>Earth could survive a red-giant Sun</i>. [online] Available at: https://physicsworld.com/a/earth-could-survive-a-red-giant-sun/.<br><br>
+        <span id="PhysicsWorld2007">Physics World. (2007). <i>Earth could survive a red-giant Sun</i>. [online] Available at: https://physicsworld.com/a/earth-could-survive-a-red-giant-sun/.</span><br><br>
         
-        Klein, Y.Y. and Katz, B. (2023). Analytic Understanding of the Resonant Nature of Kozai--Lidov Cycles with a Precessing Quadrupole Potential. <i>The Astrophysical Journal Letters</i>, 953(1), p.L10. doi:https://doi.org/10.3847/2041-8213/aceae7.<br><br>
+        <span id="Klein2023">Klein, Y.Y. and Katz, B. (2023). Analytic Understanding of the Resonant Nature of Kozai--Lidov Cycles with a Precessing Quadrupole Potential. <i>The Astrophysical Journal Letters</i>, 953(1), p.L10. doi:https://doi.org/10.3847/2041-8213/aceae7.</span><br><br>
         
-        nasaspacenews (2025). <i>Is There Life Around Dying Stars? White Dwarfs May Surprise Us</i>. [online] NASA Space News. Available at: https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/.<br><br>
+        <span id="NASA2025">nasaspacenews (2025). <i>Is There Life Around Dying Stars? White Dwarfs May Surprise Us</i>. [online] NASA Space News. Available at: https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/.</span><br><br>
         
-        Tognetti, L. (2025). <i>Fate of Water-Rich Planets Around White Dwarfs</i>. [online] Universe Today. Available at: https://www.universetoday.com/articles/fate-of-water-rich-planets-around-white-dwarfs.<br><br>
+        <span id="Tognetti2025">Tognetti, L. (2025). <i>Fate of Water-Rich Planets Around White Dwarfs</i>. [online] Universe Today. Available at: https://www.universetoday.com/articles/fate-of-water-rich-planets-around-white-dwarfs.</span><br><br>
         
-        Limbach, M.A., Vanderburg, A., Stevenson, K.B., Blouin, S., Morley, C., Lustig-Yaeger, J., Soares-Furtado, M. and Janson, M. (2022). A new method for finding nearby white dwarfs exoplanets and detecting biosignatures. <i>Monthly Notices of the Royal Astronomical Society</i>, [online] 517(2), pp.2622–2638. doi:https://doi.org/10.1093/mnras/stac2823.
+        <span id="Limbach2022">Limbach, M.A., Vanderburg, A., Stevenson, K.B., Blouin, S., Morley, C., Lustig-Yaeger, J., Soares-Furtado, M. and Janson, M. (2022). A new method for finding nearby white dwarfs exoplanets and detecting biosignatures. <i>Monthly Notices of the Royal Astronomical Society</i>, [online] 517(2), pp.2622–2638. doi:https://doi.org/10.1093/mnras/stac2823.</span>
     </p>
     
     <!-- From H4: Presentation Section -->
@@ -258,11 +269,15 @@
             alert("Last modified time has been successfully verified from GitHub API.");
         }
         
-        // MODIFIED Word Count Function to include ALL article sections
+        // MODIFIED Word Count Function to include ALL article sections INCLUDING headings and tables
         // Function to calculate and display word count for a specified section
         function displayWordCount(sectionId) {
-            // Get the text content from the specified section
-            const text = document.getElementById(sectionId).textContent;
+            // Get the element
+            const element = document.getElementById(sectionId);
+            if (!element) return 0;
+            
+            // Get the text content (includes tables, citations, headings within the element)
+            const text = element.textContent;
             // Split text into words based on spaces and filter out any empty strings
             const wordArray = text.trim().split(/\s+/);
             // Count the words
@@ -271,23 +286,48 @@
             return wordCount;
         }
         
+        // Function to get word count for headings
+        function getHeadingWordCount() {
+            // Get all h3 headings within the main article (excluding Abstract and References)
+            const headings = document.querySelectorAll('h3[id]');
+            let headingWordCount = 0;
+            
+            headings.forEach(heading => {
+                const headingId = heading.getAttribute('id');
+                // Exclude Abstract, References, and Presentation headings
+                if (headingId !== 'Abstract' && headingId !== 'References' && headingId !== 'Presentation') {
+                    const headingText = heading.textContent;
+                    const words = headingText.trim().split(/\s+/);
+                    headingWordCount += words.length;
+                }
+            });
+            
+            return headingWordCount;
+        }
+        
         // Function to calculate and display total word count from ALL article sections
         function displayTotalWordCount() {
-            // Calculate word count for EACH article section
+            // Calculate word count for EACH article section INCLUDING comparison table
             const IntroductionCount = displayWordCount("Introduction_InText");
             const FormationCount = displayWordCount("Formation_InText");
             const HabitableZonesCount = displayWordCount("HabitableZones_InText");
+            const ComparisonTableCount = displayWordCount("ComparisonTable_InText");
             const HabitabilityCount = displayWordCount("Habitability_InText");
             const DetectionCount = displayWordCount("Detection_InText");
             const DiscussionCount = displayWordCount("Discussion_InText");
             const ConclusionCount = displayWordCount("Conclusion_InText");
             
-            // Calculate the sum of ALL article sections (excluding Abstract and References)
+            // Get word count for headings
+            const headingCount = getHeadingWordCount();
+            
+            // Calculate the sum of ALL article content (excluding Abstract and References)
+            // INCLUDING: text, tables, in-text citations, and sub-headings
             const totalWordCount = IntroductionCount + FormationCount + HabitableZonesCount + 
-                                  HabitabilityCount + DetectionCount + DiscussionCount + ConclusionCount;
+                                  ComparisonTableCount + HabitabilityCount + DetectionCount + 
+                                  DiscussionCount + ConclusionCount + headingCount;
             
             // Display the total word count
-            document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+            document.getElementById("totalWordCount").innerText = `Total word count (including figures, tables, in-text citations and sub-headings, excluding Abstract and References): ${totalWordCount}`;
         }
         
         // Run both functions when the page loads
