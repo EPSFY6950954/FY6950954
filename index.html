@@ -3,80 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-    
     <title>Prospects for Life on Planets Orbiting White Dwarfs</title>
     
     <style>
-        
+        /* Tumblr/MySpace style theme */
         body {
             font-family: 'Courier New', monospace;
-            background-color: #0a0a1a;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.15) 0%, transparent 50%);
+            background-color: #000022;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
             color: #e0e0ff;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
         }
         
-        /* twinkling stars */
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 1; }
-        }
-        
-        .star {
-            position: fixed;
-            background-color: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-            z-index: -1;
-        }
-        
-        /* main text box */
-        .content-box {
-            background-color: rgba(10, 10, 30, 0.85);
+        .main-container {
+            background-color: rgba(0, 0, 40, 0.8);
             border: 4px solid #ff00ff;
-            border-radius: 15px;
+            border-radius: 10px;
             padding: 25px;
-            margin: 30px 0;
-            box-shadow: 
-                0 0 20px rgba(255, 0, 255, 0.3),
-                inset 0 0 20px rgba(0, 255, 255, 0.2);
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
         }
         
-        /* headings */
-        h1, h2, h3 {
-            font-family: 'Georgia', serif;
-            text-shadow: 0 0 10px currentColor;
-        }
-        
+        /* Headers with glowing effect */
         h1 {
             color: #ff66cc;
-            font-size: 2.5em;
             text-align: center;
-            margin-bottom: 10px;
+            font-size: 28px;
+            text-shadow: 0 0 10px #ff66cc;
+            margin-bottom: 5px;
         }
         
         h2 {
             color: #00ffff;
-            font-size: 1.8em;
             border-bottom: 2px dotted #00ffff;
             padding-bottom: 5px;
-            margin-top: 40px;
+            margin-top: 30px;
+            font-size: 22px;
         }
         
         h3 {
             color: #ffff66;
-            font-size: 1.3em;
-            margin-top: 30px;
+            font-size: 18px;
+            margin-top: 25px;
         }
         
-        /* links */
+        /* Links */
         a {
             color: #ff66cc;
             text-decoration: none;
@@ -85,24 +59,10 @@
         
         a:hover {
             color: #00ffff;
-            text-shadow: 0 0 10px #00ffff;
+            text-decoration: underline;
         }
         
-        /* buttons */
-        .button {
-            background: linear-gradient(to bottom, #ff66cc, #cc0099);
-            border: 1px solid #ffff66;
-            color: white;
-            padding: 6px 12px;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            border-radius: 15px;
-            display: inline-block;
-            margin: 3px;
-            text-shadow: 1px 1px 2px black;
-        }
-        
-        /* divider */
+        /* Divider */
         hr {
             border: none;
             height: 2px;
@@ -115,23 +75,8 @@
             margin: 30px 0;
         }
         
-        /* URN display */
-        .urn-display {
-            text-align: center;
-            color: #ffff66;
-            font-family: 'Courier New', monospace;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            padding: 8px;
-            background-color: rgba(0, 0, 50, 0.5);
-            border-radius: 10px;
-            display: inline-block;
-            margin-left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        /* abstract */
-        .abstract {
+        /* Abstract box */
+        .abstract-box {
             background-color: rgba(0, 30, 60, 0.5);
             padding: 20px;
             border-radius: 10px;
@@ -139,397 +84,378 @@
             margin: 20px 0;
         }
         
-        /* harvard references */
-        .harvard-reference {
-            margin-bottom: 12px;
-            padding-left: 15px;
-            text-indent: -15px;
-            padding: 8px;
-            border-left: 3px solid #ff00ff;
-            background-color: rgba(20, 0, 40, 0.3);
-            border-radius: 0 5px 5px 0;
-        }
-        
-        /* word count */
-        .word-count {
-            margin-top: 30px;
-            padding: 10px;
-            background-color: rgba(0, 20, 40, 0.5);
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        /* last time updated */
-        .last-updated {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: rgba(30, 0, 50, 0.5);
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        /* paragraphs */
-        p {
-            margin-bottom: 20px;
-        }
-        
-        /* sections */
-        .section-content {
-            margin-bottom: 30px;
-        }
-        
-        /* in text citations */
-        .citation {
-            color: #ffff66;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-
-        /* table */
-        .data-table {
-            margin: 30px 0;
-            text-align: center;
-        }
-
-        .table-container {
-            display: inline-block;
-            background-color; rgba(0, 30, 60, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            border: 3px solid #00ffff;
-            max-width: 600px;
-        }
-
-        .table-title {
-            color: #ffff66;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        .comparison-table {
-            width: 100%;
+        /* Table styling */
+        table {
+            width: 80%;
+            margin: 20px auto;
             border-collapse: collapse;
-            color: #e0e0ff;
+            background-color: rgba(0, 0, 50, 0.5);
         }
-
-        .comparison-table th {
-            padding: 12px;
+        
+        th {
+            background-color: rgba(102, 0, 102, 0.7);
+            color: #ffffff;
+            padding: 10px;
             border: 1px solid #ff00ff;
-            text-align: left;
-            background-color: rgba(102, 0, 102, 0.5);
         }
-
-        .comparison-table td {
+        
+        td {
             padding: 10px;
             border: 1px solid #00ffff;
-            background-color: rgba(0, 0, 50, 0.3);
         }
-
-        .table-caption {
-            color: #ff66cc;
-            font-size: 0.9em;
-            margin-top: 15px;
-            font-style: italic;
+        
+        tr:nth-child(even) {
+            background-color: rgba(0, 30, 60, 0.3);
+        }
+        
+        /* References */
+        .reference-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            text-indent: -20px;
+        }
+        
+        /* Content sections */
+        .section-content {
+            margin: 15px 0;
+            padding: 0 10px;
+        }
+        
+        /* URN display */
+        .urn-display {
+            text-align: center;
+            color: #ffff66;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 50, 0.5);
+            border-radius: 10px;
+        }
+        
+        /* Buttons */
+        .toc-button {
+            display: inline-block;
+            background: linear-gradient(to bottom, #ff66cc, #cc0099);
+            border: 1px solid #ffff66;
+            color: white;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .toc-button:hover {
+            background: linear-gradient(to bottom, #ff88dd, #dd22aa);
+            box-shadow: 0 0 10px #ff66cc;
+        }
+        
+        /* Validation sections */
+        .validation-box {
+            background-color: rgba(0, 20, 40, 0.7);
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #00ffff;
+            margin: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    
-    <!-- animated stars in background -->
-    <div id="stars-container"></div>
 
-    <!-- Subtle University Banner -->
-    <div class="university-banner">
-        <div class="banner-decoration left"></div>
-        <div class="banner-container">
-            <p class="banner-text">University of Surrey</p>
-            <p class="banner-subtext">ENG0018 Computer Laboratory 2025/26</p>
-        </div>
-        <div class="banner-decoration right"></div>
+<div class="main-container">
+    
+    <!-- University Banner -->
+    <img src="WebBanner2023.png" alt="University of Surrey Banner" width="100%" style="max-width: 900px;">
+    
+    <!-- Module Info -->
+    <h1>ENG0018 Computer Laboratory 2025/26</h1>
+    <div class="urn-display">
+        Student URN: 6950954
     </div>
     
-    <!-- main content box -->
-    <div class="content-box">
-        <!-- title and URN -->
-        <div style="text-align: center; margin-bottom: 30px;">
-            <div style="font-size: 0.9em; color: #ffff66; letter-spacing: 2px;">
-                ✦･ﾟ✧･ﾟ✧ CONFERENCE PROJECT ✧･ﾟ✧･ﾟ✦
-            </div>
-            <h1>PROSPECTS FOR LIFE ON PLANETS ORBITING WHITE DWARFS</h1>
-            <div class="urn-display">
-                Student URN: 6950954
-            </div>
-        </div>
-        
-        <!-- table of contents -->
-        <h2>✧ TABLE OF CONTENTS ✧</h2>
-        <div style="margin: 20px 0;">
-            <a href="#abstract" class="button">ABSTRACT</a>
-            <a href="#introduction" class="button">1. INTRODUCTION</a>
-            <a href="#formation" class="button">2. FORMATION & SURVIVAL</a>
-            <a href="#habitable-zones" class="button">3. HABITABLE ZONES</a>
-            <a href="#challenge" class="button">4. THE HABITABILITY CHALLENGE</a>
-            <a href="#detection" class="button">5. DETECTION & CHARACTERISATION</a>
-            <a href="#discussion" class="button">6. DISCUSSION</a>
-            <a href="#conclusions" class="button">7. CONCLUSIONS</a>
-            <a href="#references" class="button">8. REFERENCES</a>
-        </div>
-        
-        <hr>
-        
-        <!-- abstract -->
-        <div class="abstract">
-            <h3 id="abstract">ABSTRACT</h3>
-            <div class="section-content">
-                <p>White dwarfs are the dense stellar remnants of Sun like stars that have run out of nuclear fuel and leave behind a core mainly composed of carbon and oxygen, with the majority having a mass of about 0.6M☉ and a radius similar to that of Earth (Space.com, 2024). Recent discoveries of exoplanets orbiting white dwarf stars have highlighted their potential to support a habitable environment and sparked interest about whether these systems could maintain conditions that would be suitable for organisms to develop.</p>
-                
-                <p>In this work, we review current understandings of the formation, stability, and habitability of planets orbiting white dwarfs in order to evaluate their potential for life. We examine the physical constraints affecting planetary survival, including the impact of stellar evolution, the location and evolution of habitable zones as white dwarfs cool and fade, and the biological and observational aspects for detecting life. While conditions for habitability are restrictive, emerging evidence suggests white dwarf systems are interesting targets in the search for extraterrestrial life.</p>
-            </div>
-        </div>
-        
-        <!-- introduction -->
-        <h2 id="introduction">✧ 1. INTRODUCTION ✧</h2>
-        <div id="intro-content" class="section-content">
-            <p>White dwarfs mark the final evolutionary stage of stars with initial masses of around 3-4M☉. Approximately 10 billion exist in the Milky Way (Space.com, 2024), with around 97% of stars in our galaxy eventually becoming white dwarfs (Scientific American, 2024). After exhausting their nuclear fuel, these stars shed their outer layers, leaving behind compact, electron degenerate cores (Sentinel Mission, 2024). Without ongoing nuclear fusion, white dwarfs emit leftover thermal energy and ultimately become black dwarfs.</p>
+    <!-- Article Title -->
+    <h1 style="color: #ff66cc; margin-top: 20px;">The Prospects for Life on Planets Orbiting White Dwarfs</h1>
+    
+    <hr>
+    
+    <!-- Table of Contents -->
+    <h2>✧ TABLE OF CONTENTS ✧</h2>
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="#Abstract" class="toc-button">ABSTRACT</a>
+        <a href="#Introduction" class="toc-button">1. INTRODUCTION</a>
+        <a href="#Formation" class="toc-button">2. FORMATION & SURVIVAL</a>
+        <a href="#Zones" class="toc-button">3. HABITABLE ZONES</a>
+        <a href="#Challenges" class="toc-button">4. THE HABITABILITY CHALLENGE</a>
+        <a href="#Detection" class="toc-button">5. DETECTION & CHARACTERISATION</a>
+        <a href="#Discussion" class="toc-button">6. DISCUSSION</a>
+        <a href="#Conclusions" class="toc-button">7. CONCLUSIONS</a>
+        <a href="#References" class="toc-button">8. REFERENCES</a>
+    </div>
+    
+    <hr>
+    
+    <!-- Abstract -->
+    <div class="abstract-box">
+        <h3 id="Abstract">Abstract</h3>
+        <div class="section-content">
+            <p>White dwarfs are the dense stellar remnants of Sun-like stars that have run out of nuclear fuel and leave behind a core mainly composed of carbon and oxygen. Most white dwarfs have a mass of about 0.6M☉ and a radius similar to that of Earth. Recent discoveries of exoplanets orbiting white dwarf stars highlight their potential to support a habitable environment and have sparked interest about whether these systems can maintain conditions that would be suitable for organisms to develop.</p>
             
-            <p>Some white dwarfs are surrounded by debris disks, which can form second generation planets, while others retain pre-existing exoplanets that survived the host star's evolution (Universe Today, 2024). These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life, this paper explores both the theoretical and observational perspectives.</p>
-        </div>
-        
-        <!-- formation section -->
-        <h2 id="formation">✧ 2. PLANETARY FORMATION & SURVIVAL ✧</h2>
-        <div id="formation-content" class="section-content">
-            <p>When a parent star evolves into a red giant, it can engulf nearby planets within roughly 1 AU, meaning most close in planets are destroyed during this phase (Astronomy.com, 2024), however some research indicates that planets orbiting within approximately 2 AU may survive this red giant stage. Although, their orbits can expand due to stellar mass loss, resulting in increased semimajor axes and longer orbital periods (Physics World, 2024).</p>
-            
-            <p>Certain second generation white dwarf planets can form from a progenitor's debris disk, such as WD 1856+534 b (arXiv, 2024), happening through tidal disruption where a companion star is pulled apart by the white dwarf's strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf (IOP Science, 2024a).</p>
-        </div>
-        
-        <!-- habitable zones -->
-        <h2 id="habitable-zones">✧ 3. HABITABLE ZONES ✧</h2>
-        <div id="zones-content" class="section-content">
-            <p>Due to their small radii and low luminosities, white dwarfs emit very little light (Embry-Riddle, 2024), with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet's surface (Oxford Academic, 2024), are found extremely close to the star, typically around 0.012AU (IOP Science, 2024b).</p>
-            
-            <p>As white dwarfs cool, their habitable zones migrate inward, the rate depending on the star's age and temperature (IOP Science, 2024b). Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres, however a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions.</p>
-
-            <div class="data-table">
-                <div class="table-container">
-                    <h4 class="table-title">Habitable Zone Comparison of Stellar Types</h4>
-                    <table class="comparison-table">
-                        <tr>
-                            <th>Star Type</th>
-                            <th>Habitable Zone Distance</th>
-                            <th>Typical Temperature Range</th>
-                            <th>Planetary Period</th>
-                        </tr>
-                        <tr>
-                            <td><strong>White Dwarf</strong></td>
-                            <td>~0.012 AU</td>
-                            <td>200-300 K</td>
-                            <td>1-10 days</td>
-                        </tr>
-                        <tr>
-                            <td>Sun like (G-type)</td>
-                            <td>0.95-1.37 AU</td>
-                            <td>250-350 K</td>
-                            <td>~365 days</td>
-                        </tr>
-                        <tr>
-                            <td>Red Dwarf (M-type)</td>
-                            <td>0.03-0.1 AU</td>
-                            <td>200-280 K</td>
-                            <td>10-40 days</td>
-                        </tr>
-                    </table>
-                    <p class="table-caption">
-                        <em>Comparison of habitable zones around different stellar types (Kasting et al., 1993; IOP Science, 2024b).</em>
-                    </p>
-                </div>
-            </div>
-
-            <p>From Table 1, we can observe that white dwarf habitable zones are extremely close in comparison to those of main sequence stars (Kasting et al., 1993), resulting in orbital periods measured in days rather than years and increasing the likelihood of tidal locking.</p>
-        </div>
-        
-        <!-- habitability challenge -->
-        <h2 id="challenge">✧ 4. THE HABITABILITY CHALLENGE ✧</h2>
-        <div id="challenge-content" class="section-content">
-            <p>This continuous inward migration of the habitable zone creates a significant problem. Even if a planet is initially located within this zone, it will eventually move out as the star cools and become too cold to sustain life. However, recent research suggests that in some cases the cooling of white dwarfs slows down due to neon-22 distillation, where heavier elements sink towards the core and release gravitational energy (University of Washington, 2024). This can temporarily heat the star and pause cooling for up to 10 billion years, prolonging the stability of the habitable zone (NASA Space News, 2025).</p>
-            
-            <p>Newly formed white dwarfs can reach surface temperatures of over 100,000 K and emit strong ultraviolet and X-ray radiation (Number Analytics, 2024), posing a serious threat to nearby planets because it can strip away atmospheres and evaporate surface water (University of Washington, 2024). Therefore, planets must migrate into the habitable zone only after the white dwarf has cooled significantly, those with large enough water reserves and orbits which are beyond the typical habitable zone may be more likely to retain surface water (Astronomy & Astrophysics, 2014).</p>
-        </div>
-        
-        <!-- detection -->
-        <h2 id="detection">✧ 5. DETECTION & CHARACTERISATION ✧</h2>
-        <div id="detection-content" class="section-content">
-            <p>Standard exoplanet detection methods, such as transit and radial velocity techniques, have proven to be less effective for white dwarf systems due to their small radii and low luminosities, with only 20% of known planets orbiting white dwarfs being discovered using these methods (IOP Science, 2024b).</p>
-            
-            <p>These characteristics also make infrared excess detection more efficient. Using this approach, the first confirmed transiting white dwarf planet, WD 1856+534b, was discovered with JWST's Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close orbiting, Jupiter sized planet (Universe Today, 2024).</p>
-            
-            <p>Direct imaging is another promising technique, benefitting from the white dwarf's low luminosity, which is typically 10^2-10^5 x fainter than main-sequence stars. This greatly increases the planet to white dwarf contrast ratio and improves detectability of orbiting planets (Astronomy & Astrophysics, 2014).</p>
-        </div>
-        
-        <!-- discussion -->
-        <h2 id="discussion">✧ 6. DISCUSSION ✧</h2>
-        <div id="discussion-content" class="section-content">
-            <p>The possibility that white dwarfs could host habitable planets challenges traditional beliefs about stellar life cycles and post main sequence environments, the significant physical and biological challenges, particularly regarding planetary migration, tidal locking and atmospheric survival, make chances of habitability seem unlikely. However, the long lifespan of white dwarfs and the ability to detect close in planets, make these systems essential targets for astrobiology. If life can emerge or adapt under such extreme and persisting conditions, white dwarf systems might be able to harbour life long after main sequence stars have faded.</p>
-        </div>
-        
-        <!-- conclusions -->
-        <h2 id="conclusions">✧ 7. CONCLUSIONS ✧</h2>
-        <div id="conclusions-content" class="section-content">
-            <p>While prospects for life on planets around white dwarfs are uncertain, they are not negligible. Surviving or newly formed planets could maintain stable environments for billions of years under specific conditions. The discovery of transiting planets around white dwarfs indicates that such systems exist and merit attention in future observational campaigns, which may reveal whether these remnants of stellar evolution can host life.</p>
-        </div>
-        
-        <hr>
-        
-        <!-- references -->
-        <h2 id="references">✧ 8. REFERENCES ✧</h2>
-        <div style="background-color: rgba(0, 20, 40, 0.7); padding: 20px; border-radius: 10px;">
-            <div class="harvard-reference">
-                Astronomy & Astrophysics (2014) 'Fate of water-rich planets around white dwarfs', Astronomy & Astrophysics, 571, A23. Available at: <a href="https://www.aanda.org/articles/aa/full_html/2014/10/aa23231-13/aa23231-13.html">https://www.aanda.org/articles/aa/full_html/2014/10/aa23231-13/aa23231-13.html</a> (Accessed: 5 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Astronomy.com (2024) 'What will happen to the planets when the Sun becomes a red giant?', Astronomy.com. Available at: <a href="https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/">https://www.astronomy.com/observing/what-will-happen-to-the-plateach-64x0l-3ht-planets-when-the-sun-becomes-a-red-giant/</a> (Accessed: 6 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                arXiv (2024) 'Dynamical formation of close binaries during the common-envelope phase', arXiv preprint. Available at: <a href="https://arxiv.org/pdf/2407.14190v3">https://arxiv.org/pdf/2407.14190v3</a> (Accessed: 6 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Embry-Riddle Aeronautical University (2024) 'The White Dwarf Luminosity Function', Embry-Riddle Aeronautical University. Available at: <a href="https://portfolio.erau.edu/ws/portalfiles/portal/39855981/The%20White%20Dwarf%20Luminosity%20Function.pdf">https://portfolio.erau.edu/ws/portalfiles/portal/39855981/The%20White%20Dwarf%20Luminosity%20Function.pdf</a> (Accessed: 4 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                IOP Science (2024a) 'Kozai-Lidov cycles in white dwarf systems', The Astrophysical Journal Letters, 915(1), L37. Available at: <a href="https://iopscience.iop.org/article/10.3847/2041-8213/aceae7/pdf">https://iopscience.iop.org/article/10.3847/2041-8213/aceae7/pdf</a> (Accessed: 28 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                IOP Science (2024b) 'Habitability of white dwarf planetary systems', The Astrophysical Journal Letters, 963(2), L42. Available at: <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad9821/pdf">https://iopscience.iop.org/article/10.3847/2041-8213/ad9821/pdf</a> (Accessed: 25 October 2025).
-            </div>
-
-            <div class="harvard-reference">
-                Kasting, J.F., Whitmire, D.P. and Reynolds, R.T. (1993) 'Habitable zones around main sequence stars', Icarus, 101(1), pp. 108-128. Available at: <a href="https://doi.org/10.1006/icar.1993.1010">https://doi.org/10.1006/icar.1993.1010</a> (Accessed: 29 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                NASA Space News (2025) 'Is there life around dying stars? White dwarfs may surprise us', NASA Space News, 4 February. Available at: <a href="https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/">https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/</a> (Accessed: 25 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Number Analytics (2024) 'Mystique of white dwarfs', Number Analytics Blog. Available at: <a href="https://www.numberanalytics.com/blog/mystique-of-white-dwarfs">https://www.numberanalytics.com/blog/mystique-of-white-dwarfs</a> (Accessed: 28 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Oxford Academic (2024) 'Detection methods for white dwarf exoplanets', Monthly Notices of the Royal Astronomical Society, 517(2), pp. 2622-2635. Available at: <a href="https://academic.oup.com/mnras/article/517/2/2622/6747139">https://academic.oup.com/mnras/article/517/2/2622/6747139</a> (Accessed: 1 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Physics World (2024) 'Earth could survive a red giant Sun', Physics World, 15 March. Available at: <a href="https://physicsworld.com/a/earth-could-survive-a-red-giant-sun/">https://physicsworld.com/a/earth-could-survive-a-red-giant-sun/</a> (Accessed: 9 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Scientific American (2024) 'Living near a white dwarf', Scientific American, 22 January. Available at: <a href="https://www.scientificamerican.com/article/living-near-a-white-dwarf/">https://www.scientificamerican.com/article/living-near-a-white-dwarf/</a> (Accessed: 26 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Sentinel Mission (2024) 'Electron degeneracy pressure', Sentinel Mission Astrophysics Glossary. Available at: <a href="https://sentinelmission.org/astrophysics-glossary/electron-degeneracy-pressure/">https://sentinelmission.org/astrophysics-glossary/electron-degeneracy-pressure/</a> (Accessed: 1 November 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Space.com (2024) 'White dwarf stars: Facts about the dense stellar remnants', Space.com, 10 March. Available at: <a href="https://www.space.com/23756-white-dwarf-stars.html">https://www.space.com/23756-white-dwarf-stars.html</a> (Accessed: 27 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                University of Washington (2024) 'Neon-22 distillation in cooling white dwarfs', University of Washington Publications. Available at: <a href="https://faculty.washington.edu/rkb9/publications/bh13.pdf">https://faculty.washington.edu/rkb9/publications/bh13.pdf</a> (Accessed: 30 October 2025).
-            </div>
-            
-            <div class="harvard-reference">
-                Universe Today (2024) 'Webb directly images two planets orbiting white dwarfs', Universe Today, 5 June. Available at: <a href="https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs">https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs</a> (Accessed: 3 November 2025).
-            </div>
-        </div>
-        
-        <!-- word count -->
-        <div class="word-count">
-            <p><strong>Word Count:</strong> <span id="word-count-display">Calculating...</span></p>
-        </div>
-        
-        <!-- last updated -->
-        <div class="last-updated">
-            <p><strong>Last Updated:</strong> <span id="last-updated-display">Loading...</span></p>
-            <button onclick="updateTime()" style="background: linear-gradient(to bottom, #6666ff, #3333cc); border: none; color: white; padding: 5px 10px; border-radius: 5px; font-family: 'Courier New', monospace; cursor: pointer;">Update Time</button>
+            <p>In this work, we review current understandings of the formation, stability, and habitability of planets orbiting white dwarfs in order to evaluate their potential for life. We examine the physical constraints affecting planetary survival, including the impact of stellar evolution, the location and evolution of habitable zones as white dwarfs cool and fade, and the biological and observational aspects for detecting life. While conditions for habitability are restrictive, emerging evidence suggests white dwarf systems are interesting targets in the search for extraterrestrial life.</p>
         </div>
     </div>
     
-    <script>
-        // generate twinkling stars
-        function createStars() {
-            const container = document.getElementById('stars-container');
-            for (let i = 0; i < 30; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.width = Math.random() * 2 + 1 + 'px';
-                star.style.height = star.style.width;
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 5 + 's';
-                star.style.animationDuration = Math.random() * 3 + 2 + 's';
-                container.appendChild(star);
-            }
-        }
+    <!-- Introduction -->
+    <h2 id="Introduction">✧ 1. INTRODUCTION ✧</h2>
+    <div id="Introduction_InText" class="section-content">
+        <p>White dwarfs mark the final evolutionary stage of stars with initial masses of around 3-4M☉, which is not enough for them to become neutron stars or black holes. There are approximately 10 billion white dwarfs in the Milky Way and around 97% of all stars in our galaxy will eventually become white dwarfs. After exhausting their nuclear fuel, these stars shed their outer layers and leave behind compact, electron-degenerate cores. Without ongoing nuclear fusion, white dwarfs emit leftover thermal energy and gradually cool, ultimately becoming black dwarfs.</p>
         
-        // calculate word count
-        function calculateWordCount() {
-            const sections = [
-        'intro-content',
-        'formation-content', 
-        'zones-content',
-        'challenge-content',
-        'detection-content',
-        'discussion-content',
-        'conclusions-content'
-    ];
-        let totalWords = 0;
+        <p>Some white dwarfs are surrounded by debris disks, which can form second-generation planets, while others retain pre-existing exoplanets that survived the host star's evolution. These findings have raised growing interest in whether white dwarf systems can sustain conditions suitable for life. This paper explores both theoretical and observational perspectives on the habitability of white dwarf systems.</p>
+    </div>
+    
+    <!-- Formation -->
+    <h2 id="Formation">✧ 2. PLANETARY FORMATION AND SURVIVAL ✧</h2>
+    <div id="Formation_InText" class="section-content">
+        <p>When a parent star evolves into a red giant, it can engulf nearby planets within roughly 1 AU, meaning most close-in planets are destroyed during this phase. However, some research indicates that planets orbiting within approximately 2 AU may survive this red giant stage, although their orbits can expand due to stellar mass loss, resulting in increased semimajor axes and longer orbital periods.</p>
+        
+        <p>Certain second-generation white dwarf planets can form from a progenitor's debris disk, such as WD 1856+534 b. This happens through tidal disruption, where a companion star is pulled apart by the white dwarf's strong gravity, producing a disk of gas and dust. Additionally, gravitational interactions like Kozai-Lidov cycles can affect distant planets, drawing them closer to the white dwarf.</p>
+    </div>
+    
+    <!-- Habitable Zones -->
+    <h2 id="Zones">✧ 3. HABITABLE ZONES AROUND WHITE DWARFS ✧</h2>
+    <div id="Zones_InText" class="section-content">
+        <p>Due to their small radii and low luminosities, white dwarfs emit very little light, with their only significant source of energy being residual thermal radiation which decreases over time. Consequently, their habitable zones, defined as regions where liquid water could exist on a planet's surface, are found extremely close to the star, typically around 0.012AU.</p>
+        
+        <p>As white dwarfs cool, their habitable zones migrate inward, with the rate of this migration depending on the star's age and temperature. Planets within the habitable zone are likely to become tidally locked, resulting in permanent day and night hemispheres, however a sufficiently dense atmosphere or active oceanic circulation could help redistribute heat effectively and maintain moderate surface conditions across the planet.</p>
+    </div>
+    
+    <!-- Table -->
+    <table>
+        <tr>
+            <th>Star Type</th>
+            <th>Habitable Zone Distance</th>
+            <th>Typical Temperature Range</th>
+            <th>Planetary Period</th>
+        </tr>
+        <tr>
+            <td><strong>White Dwarf</strong></td>
+            <td>~0.012 AU</td>
+            <td>200-300 K</td>
+            <td>1-10 days</td>
+        </tr>
+        <tr>
+            <td>Sun-like (G-type)</td>
+            <td>0.95-1.37 AU</td>
+            <td>250-350 K</td>
+            <td>~365 days</td>
+        </tr>
+        <tr>
+            <td>Red Dwarf (M-type)</td>
+            <td>0.03-0.1 AU</td>
+            <td>200-280 K</td>
+            <td>10-40 days</td>
+        </tr>
+    </table>
+    
+    <!-- Challenges -->
+    <h2 id="Challenges">✧ 4. THE HABITABILITY CHALLENGE ✧</h2>
+    <div id="Challenges_InText" class="section-content">
+        <p>The continuous inward migration of the habitable zone creates a significant problem. Even if a planet is initially located within this zone, it will eventually move out as the star cools, becoming too cold to sustain life. However, recent research suggests that in some cases, the cooling of white dwarfs slows down due to neon-22 distillation, where heavier elements sink towards the core and release gravitational energy. This can temporarily heat the star and pause cooling for up to 10 billion years, prolonging the stability of the habitable zone.</p>
+        
+        <p>Newly formed white dwarfs can reach surface temperatures of over 100,000 K and emit strong ultraviolet and X-ray radiation, posing a serious threat to nearby planets, as such radiation can strip away planetary atmospheres and evaporate surface water. For this reason, planets must migrate into the habitable zone only after the white dwarf has cooled significantly. Planets with large enough water reserves and orbits which are slightly beyond the typical habitable zone may be more likely to retain surface water.</p>
+    </div>
+    
+    <!-- Detection -->
+    <h2 id="Detection">✧ 5. DETECTION AND CHARACTERISATION OPPORTUNITIES ✧</h2>
+    <div id="Detection_InText" class="section-content">
+        <p>Standard exoplanet detection methods, such as transit and radial velocity techniques, have proven to be less effective for white dwarf systems due to their small radii and low luminosities, with only 20% of known planets orbiting white dwarfs being discovered using these methods.</p>
+        
+        <p>Nonetheless, these characteristics can also offer unique advantages. The featureless spectra of white dwarfs make infrared excess detection more efficient. This approach enabled the discovery of the first confirmed transiting white dwarf planet, WD 1856+534b with JWST's Mid-Infrared Instrument (MIRI) detecting its thermal emission and confirming that it is close-orbiting, Jupiter-sized planet.</p>
+        
+        <p>Direct imaging is another promising technique, benefitting from the white dwarf's low luminosity, which is typically 10^2- 10^5 x fainter than main-sequence stars. This greatly increases the planet-to-white-dwarf contrast ratio and improves the detectability of orbiting planets.</p>
+    </div>
+    
+    <!-- Discussion -->
+    <h2 id="Discussion">✧ 6. DISCUSSION ✧</h2>
+    <div id="Discussion_InText" class="section-content">
+        <p>The possibility that white dwarfs could host habitable planets challenges traditional beliefs about stellar life cycles and post-main-sequence environments. With significant physical and biological challenges, particularly regarding planetary migration, tidal locking and atmospheric survival, the chances of habitability may seem low. However, the long lifespan of white dwarfs and the ability to detect close-in planets make these systems essential targets for astrobiology. If life can emerge or adapt under such extreme and persisting conditions, white dwarf systems might be able to harbour life long after main-sequence stars have faded.</p>
+    </div>
+    
+    <!-- Conclusions -->
+    <h2 id="Conclusions">✧ 7. CONCLUSIONS ✧</h2>
+    <div id="Conclusions_InText" class="section-content">
+        <p>While prospects for life on planets around white dwarfs are uncertain, they are not negligible. Planets that survive the red giant phase or form afterward could maintain stable, habitable environments for billions of years under specific conditions. The discovery of transiting planets around white dwarfs indicates that such systems exist and merit attention in future observational campaigns, which may ultimately reveal whether these remnants of stellar evolution can host living worlds.</p>
+    </div>
+    
+    <hr>
+    
+    <!-- References -->
+    <h2 id="References">✧ 8. REFERENCES ✧</h2>
+    <div style="background-color: rgba(0, 20, 40, 0.7); padding: 20px; border-radius: 10px;">
+        <div class="reference-item">
+            Astronomy & Astrophysics (2014) 'Fate of water-rich planets around white dwarfs', Astronomy & Astrophysics, 571, A23. Available at: <a href="https://www.aanda.org/articles/aa/full_html/2014/10/aa23231-13/aa23231-13.html">https://www.aanda.org/articles/aa/full_html/2014/10/aa23231-13/aa23231-13.html</a> (Accessed: 5 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            Astronomy.com (2024) 'What will happen to the planets when the Sun becomes a red giant?', Astronomy.com. Available at: <a href="https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/">https://www.astronomy.com/observing/what-will-happen-to-the-planets-when-the-sun-becomes-a-red-giant/</a> (Accessed: 6 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            arXiv (2024) 'Dynamical formation of close binaries during the common-envelope phase', arXiv preprint. Available at: <a href="https://arxiv.org/pdf/2407.14190v3">https://arxiv.org/pdf/2407.14190v3</a> (Accessed: 6 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            Embry-Riddle Aeronautical University (2024) 'The White Dwarf Luminosity Function', Embry-Riddle Aeronautical University. Available at: <a href="https://portfolio.erau.edu/ws/portalfiles/portal/39855981/The%20White%20Dwarf%20Luminosity%20Function.pdf">https://portfolio.erau.edu/ws/portalfiles/portal/39855981/The%20White%20Dwarf%20Luminosity%20Function.pdf</a> (Accessed: 4 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            IOP Science (2024a) 'Kozai-Lidov cycles in white dwarf systems', The Astrophysical Journal Letters, 915(1), L37. Available at: <a href="https://iopscience.iop.org/article/10.3847/2041-8213/aceae7/pdf">https://iopscience.iop.org/article/10.3847/2041-8213/aceae7/pdf</a> (Accessed: 28 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            IOP Science (2024b) 'Habitability of white dwarf planetary systems', The Astrophysical Journal Letters, 963(2), L42. Available at: <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad9821/pdf">https://iopscience.iop.org/article/10.3847/2041-8213/ad9821/pdf</a> (Accessed: 25 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            Kasting, J.F., Whitmire, D.P. and Reynolds, R.T. (1993) 'Habitable zones around main sequence stars', Icarus, 101(1), pp. 108-128. Available at: <a href="https://doi.org/10.1006/icar.1993.1010">https://doi.org/10.1006/icar.1993.1010</a> (Accessed: 29 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            NASA Space News (2025) 'Is there life around dying stars? White dwarfs may surprise us', NASA Space News, 4 February. Available at: <a href="https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/">https://nasaspacenews.com/2025/02/is-there-life-around-dying-stars-white-dwarfs-may-surprise-us/</a> (Accessed: 25 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            Number Analytics (2024) 'Mystique of white dwarfs', Number Analytics Blog. Available at: <a href="https://www.numberanalytics.com/blog/mystique-of-white-dwarfs">https://www.numberanalytics.com/blog/mystique-of-white-dwarfs</a> (Accessed: 28 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            Oxford Academic (2024) 'Detection methods for white dwarf exoplanets', Monthly Notices of the Royal Astronomical Society, 517(2), pp. 2622-2635. Available at: <a href="https://academic.oup.com/mnras/article/517/2/2622/6747139">https://academic.oup.com/mnras/article/517/2/2622/6747139</a> (Accessed: 1 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            Physics World (2024) 'Earth could survive a red giant Sun', Physics World, 15 March. Available at: <a href="https://physicsworld.com/a/earth-could-survive-a-red-giant-sun/">https://physicsworld.com/a/earth-could-survive-a-red-giant-sun/</a> (Accessed: 9 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            Scientific American (2024) 'Living near a white dwarf', Scientific American, 22 January. Available at: <a href="https://www.scientificamerican.com/article/living-near-a-white-dwarf/">https://www.scientificamerican.com/article/living-near-a-white-dwarf/</a> (Accessed: 26 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            Sentinel Mission (2024) 'Electron degeneracy pressure', Sentinel Mission Astrophysics Glossary. Available at: <a href="https://sentinelmission.org/astrophysics-glossary/electron-degeneracy-pressure/">https://sentinelmission.org/astrophysics-glossary/electron-degeneracy-pressure/</a> (Accessed: 1 November 2025).
+        </div>
+        
+        <div class="reference-item">
+            Space.com (2024) 'White dwarf stars: Facts about the dense stellar remnants', Space.com, 10 March. Available at: <a href="https://www.space.com/23756-white-dwarf-stars.html">https://www.space.com/23756-white-dwarf-stars.html</a> (Accessed: 27 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            University of Washington (2024) 'Neon-22 distillation in cooling white dwarfs', University of Washington Publications. Available at: <a href="https://faculty.washington.edu/rkb9/publications/bh13.pdf">https://faculty.washington.edu/rkb9/publications/bh13.pdf</a> (Accessed: 30 October 2025).
+        </div>
+        
+        <div class="reference-item">
+            Universe Today (2024) 'Webb directly images two planets orbiting white dwarfs', Universe Today, 5 June. Available at: <a href="https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs">https://www.universetoday.com/articles/webb-directly-images-two-planets-orbiting-white-dwarfs</a> (Accessed: 3 November 2025).
+        </div>
+    </div>
+    
+    <!-- Word Count Validation -->
+    <div class="validation-box">
+        <p><strong>Word Count:</strong> <span id="word-count-display">Calculating...</span></p>
+    </div>
+    
+    <!-- GitHub Timestamp Validation -->
+    <div class="validation-box">
+        <p><strong>Last Updated:</strong> <span id="last-updated-display">Loading...</span></p>
+        <button onclick="verifyLastUpdatedTime()" style="background: linear-gradient(to bottom, #6666ff, #3333cc); border: 1px solid #00ffff; color: white; padding: 8px 16px; border-radius: 5px; font-family: 'Courier New', monospace; cursor: pointer; margin-top: 10px;">Verify Last Modified Time</button>
+    </div>
 
-        sections.forEach(sectionId => {
+</div>
+
+<script>
+    // Word count function (from H3 worksheet)
+    function displayWordCount(sectionId) {
         const section = document.getElementById(sectionId);
-        if (section) {
-            const text = section.innerText || section.textContent;
-            const words = text.split(/\s+/).length;
-            totalWords += words;
-        }
-    });
-        document.getElementById('word-count-display').textContent = `~${totalWords} words`;
-        }
+        if (!section) return 0;
         
-        // update time
-        function updateTime() {
-            const now = new Date();
-            const options = { 
-                year: 'numeric', 
-                month: 'short', 
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            };
+        const text = section.textContent || section.innerText;
+        const wordArray = text.trim().split(/\s+/);
+        return wordArray.length;
+    }
+    
+    function displayTotalWordCount() {
+        const sectionIds = [
+            'Introduction_InText',
+            'Formation_InText',
+            'Zones_InText',
+            'Challenges_InText',
+            'Detection_InText',
+            'Discussion_InText',
+            'Conclusions_InText'
+        ];
+        
+        let totalWordCount = 0;
+        
+        sectionIds.forEach(sectionId => {
+            totalWordCount += displayWordCount(sectionId);
+        });
+        
+        document.getElementById('word-count-display').textContent = 
+            `${totalWordCount} words`;
+        
+        if (totalWordCount >= 800 && totalWordCount <= 1000) {
+            document.getElementById('word-count-display').style.color = '#66ff66';
+        } else {
+            document.getElementById('word-count-display').style.color = '#ff6666';
+        }
+    }
+    
+    // GitHub timestamp function (from H3 worksheet)
+    async function getLastUpdatedTime() {
+        // ⚠️ CHANGE THESE TO YOUR GITHUB DETAILS
+        const username = 'YOUR_GITHUB_USERNAME';  
+        const repo = 'YOUR_REPOSITORY_NAME';  
+        
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: { 
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} - ${response.statusText}`);
+            }
+            
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+                document.getElementById('last-updated-display').textContent = 
+                    lastCommitDate.toLocaleString();
+            } else {
+                document.getElementById('last-updated-display').textContent = 
+                    'No commits found';
+            }
+        } catch (error) {
+            console.error('Error:', error);
             document.getElementById('last-updated-display').textContent = 
-                now.toLocaleDateString('en-US', options);
-            
-            // flash effect
-            const element = document.getElementById('last-updated-display');
-            element.style.color = '#ffff66';
-            setTimeout(() => element.style.color = '#ff66cc', 500);
+                'Error fetching time';
         }
-        
-        // initialize everything when page loads
-        window.onload = function() {
-            createStars();
-            updateTime();
-            calculateWordCount();
-            
-            // auto-update time every minute
-            setInterval(updateTime, 60000);
-        };
-        
-    </script>
+    }
+    
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated-display').textContent = 'Verifying...';
+        await getLastUpdatedTime();
+    }
+    
+    // Initialize when page loads
+    window.onload = function() {
+        getLastUpdatedTime();
+        displayTotalWordCount();
+    };
+</script>
+
 </body>
 </html>
